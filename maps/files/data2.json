@@ -1,0 +1,382 @@
+[
+  {
+    "geoid": "47001",
+    "value": 80
+  },
+  {
+    "geoid": "47003",
+    "value": 44
+  },
+  {
+    "geoid": "47005",
+    "value": 31
+  },
+  {
+    "geoid": "47007",
+    "value": 30
+  },
+  {
+    "geoid": "47009",
+    "value": 76
+  },
+  {
+    "geoid": "47011",
+    "value": 26
+  },
+  {
+    "geoid": "47013",
+    "value": 47
+  },
+  {
+    "geoid": "47015",
+    "value": 30
+  },
+  {
+    "geoid": "47017",
+    "value": 84
+  },
+  {
+    "geoid": "47019",
+    "value": 19
+  },
+  {
+    "geoid": "47021",
+    "value": 49
+  },
+  {
+    "geoid": "47023",
+    "value": 43
+  },
+  {
+    "geoid": "47025",
+    "value": 43
+  },
+  {
+    "geoid": "47027",
+    "value": 22
+  },
+  {
+    "geoid": "47029",
+    "value": 31
+  },
+  {
+    "geoid": "47031",
+    "value": 26
+  },
+  {
+    "geoid": "47033",
+    "value": 22
+  },
+  {
+    "geoid": "47035",
+    "value": 38
+  },
+  {
+    "geoid": "47037",
+    "value": 493
+  },
+  {
+    "geoid": "47039",
+    "value": 37
+  },
+  {
+    "geoid": "47041",
+    "value": 53
+  },
+  {
+    "geoid": "47043",
+    "value": 43
+  },
+  {
+    "geoid": "47045",
+    "value": 36
+  },
+  {
+    "geoid": "47047",
+    "value": 65
+  },
+  {
+    "geoid": "47049",
+    "value": 27
+  },
+  {
+    "geoid": "47051",
+    "value": 70
+  },
+  {
+    "geoid": "47053",
+    "value": 62
+  },
+  {
+    "geoid": "47055",
+    "value": 71
+  },
+  {
+    "geoid": "47057",
+    "value": 29
+  },
+  {
+    "geoid": "47059",
+    "value": 43
+  },
+  {
+    "geoid": "47061",
+    "value": 34
+  },
+  {
+    "geoid": "47063",
+    "value": 22
+  },
+  {
+    "geoid": "47065",
+    "value": 352
+  },
+  {
+    "geoid": "47067",
+    "value": 20
+  },
+  {
+    "geoid": "47069",
+    "value": 53
+  },
+  {
+    "geoid": "47071",
+    "value": 68
+  },
+  {
+    "geoid": "47073",
+    "value": 47
+  },
+  {
+    "geoid": "47075",
+    "value": 20
+  },
+  {
+    "geoid": "47077",
+    "value": 62
+  },
+  {
+    "geoid": "47079",
+    "value": 32
+  },
+  {
+    "geoid": "47081",
+    "value": 47
+  },
+  {
+    "geoid": "47083",
+    "value": 24
+  },
+  {
+    "geoid": "47085",
+    "value": 10
+  },
+  {
+    "geoid": "47087",
+    "value": 26
+  },
+  {
+    "geoid": "47089",
+    "value": 34
+  },
+  {
+    "geoid": "47091",
+    "value": 15
+  },
+  {
+    "geoid": "47093",
+    "value": 304
+  },
+  {
+    "geoid": "47095",
+    "value": 6
+  },
+  {
+    "geoid": "47097",
+    "value": 9
+  },
+  {
+    "geoid": "47099",
+    "value": 48
+  },
+  {
+    "geoid": "47101",
+    "value": 24
+  },
+  {
+    "geoid": "47103",
+    "value": 58
+  },
+  {
+    "geoid": "47105",
+    "value": 40
+  },
+  {
+    "geoid": "47107",
+    "value": 38
+  },
+  {
+    "geoid": "47109",
+    "value": 67
+  },
+  {
+    "geoid": "47111",
+    "value": 20
+  },
+  {
+    "geoid": "47113",
+    "value": 64
+  },
+  {
+    "geoid": "47115",
+    "value": 68
+  },
+  {
+    "geoid": "47117",
+    "value": 28
+  },
+  {
+    "geoid": "47119",
+    "value": 43
+  },
+  {
+    "geoid": "47121",
+    "value": 19
+  },
+  {
+    "geoid": "47123",
+    "value": 35
+  },
+  {
+    "geoid": "47125",
+    "value": 44
+  },
+  {
+    "geoid": "47127",
+    "value": 36
+  },
+  {
+    "geoid": "47129",
+    "value": 54
+  },
+  {
+    "geoid": "47131",
+    "value": 52
+  },
+  {
+    "geoid": "47133",
+    "value": 46
+  },
+  {
+    "geoid": "47135",
+    "value": 6
+  },
+  {
+    "geoid": "47137",
+    "value": 14
+  },
+  {
+    "geoid": "47139",
+    "value": 62
+  },
+  {
+    "geoid": "47141",
+    "value": 42
+  },
+  {
+    "geoid": "47143",
+    "value": 20
+  },
+  {
+    "geoid": "47145",
+    "value": 36
+  },
+  {
+    "geoid": "47147",
+    "value": 51
+  },
+  {
+    "geoid": "47149",
+    "value": 114
+  },
+  {
+    "geoid": "47151",
+    "value": 40
+  },
+  {
+    "geoid": "47153",
+    "value": 38
+  },
+  {
+    "geoid": "47155",
+    "value": 35
+  },
+  {
+    "geoid": "47157",
+    "value": 745
+  },
+  {
+    "geoid": "47159",
+    "value": 63
+  },
+  {
+    "geoid": "47161",
+    "value": 21
+  },
+  {
+    "geoid": "47163",
+    "value": 58
+  },
+  {
+    "geoid": "47165",
+    "value": 38
+  },
+  {
+    "geoid": "47167",
+    "value": 35
+  },
+  {
+    "geoid": "47169",
+    "value": 8
+  },
+  {
+    "geoid": "47171",
+    "value": 10
+  },
+  {
+    "geoid": "47173",
+    "value": 56
+  },
+  {
+    "geoid": "47175",
+    "value": 14
+  },
+  {
+    "geoid": "47177",
+    "value": 21
+  },
+  {
+    "geoid": "47179",
+    "value": 57
+  },
+  {
+    "geoid": "47181",
+    "value": 42
+  },
+  {
+    "geoid": "47183",
+    "value": 49
+  },
+  {
+    "geoid": "47185",
+    "value": 11
+  },
+  {
+    "geoid": "47187",
+    "value": 109
+  },
+  {
+    "geoid": "47189",
+    "value": 36
+  }
+]
