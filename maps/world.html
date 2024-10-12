@@ -1,0 +1,27 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/mapdata/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script src="https://www.highcharts.com/samples/static/jquery.combobox.js"></script>
+
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="world.css">
+<script type="module" src="world-drilldown.js"></script>
+
+<a href="/"><img src="../assets/images/highcharts_logo.svg"></a>
+<a href="../maps/"><h1>Highcharts Maps</h1></a>
+
+<div id="demo-wrapper">
+    <div id="mapBox">
+        <div id="up"></div>
+          <div class="selector">
+            <button id="btn-prev-map" class="prev-next"><i class="fa fa-angle-left"></i></button>
+            <select id="mapDropdown" class="ui-widget combobox"></select>
+            <button id="btn-next-map" class="prev-next"><i class="fa fa-angle-right"></i></button>
+        </div>
+        <div id="world_container"></div>
+    </div>
+</div>
