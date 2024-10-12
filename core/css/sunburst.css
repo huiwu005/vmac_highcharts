@@ -1,0 +1,33 @@
+.container {
+  .row + .row {
+    border-top: 1px solid black;
+    padding-top: 15px;
+  }
+
+  .row.no-top-border {
+    border-top: 0px;
+  }
+
+  h4.row, h5.row {
+    padding-left: 15px;
+  }
+}
+
+.highcharts-figure-u24 {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#u24_dashboard_bar_chart,
+#u24_dashboard_pie_chart,
+#u24_dashboard_timeline_chart {
+  max-width: 100%;
+}
+
+.sunburst-chart .highcharts-breadcrumbs-button {
+    display: none;
+}
+
+.sunburst-chart .highcharts-breadcrumbs-separator {
+    display: none;
+}

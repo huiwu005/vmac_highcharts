@@ -1,0 +1,193 @@
+[
+  {
+    "id": "6",
+    "parent": "0",
+    "name": "PET"
+  },
+  {
+    "id": "5",
+    "parent": "0",
+    "name": "MRI"
+  },
+  {
+    "id": "4",
+    "parent": "0",
+    "name": "Vascular Risk Factors"
+  },
+  {
+    "id": "3",
+    "parent": "0",
+    "name": "Neuropathology"
+  },
+  {
+    "id": "2",
+    "parent": "0",
+    "name": "Fluid Biomarkers"
+  },
+  {
+    "id": "1",
+    "parent": "0",
+    "name": "Cognition"
+  },
+  {
+    "id": "0",
+    "parent": "",
+    "name": "ADSP-<br/>PHC",
+    "center": true
+  },
+  {
+    "parent": 1,
+    "name": "A4",
+    "value": 6595
+  },
+  {
+    "parent": 1,
+    "name": "ACT",
+    "value": 5546
+  },
+  {
+    "parent": 1,
+    "name": "ADNI",
+    "value": 3459
+  },
+  {
+    "parent": 1,
+    "name": "EFIGA",
+    "value": 6903
+  },
+  {
+    "parent": 1,
+    "name": "Knight ADRC",
+    "value": 2477
+  },
+  {
+    "parent": 1,
+    "name": "MAP - Rush",
+    "value": 2251
+  },
+  {
+    "parent": 1,
+    "name": "MARS",
+    "value": 809
+  },
+  {
+    "parent": 1,
+    "name": "NACC",
+    "value": 41538
+  },
+  {
+    "parent": 1,
+    "name": "NIA-AD FBS",
+    "value": 4564
+  },
+  {
+    "parent": 1,
+    "name": "ROS",
+    "value": 1490
+  },
+  {
+    "parent": 1,
+    "name": "WHICAP",
+    "value": 6257
+  },
+  {
+    "parent": 1,
+    "name": "WRAP",
+    "value": 1579
+  },
+  {
+    "parent": 2,
+    "name": "ADNI",
+    "value": 1249
+  },
+  {
+    "parent": 2,
+    "name": "Knight ADRC",
+    "value": 65
+  },
+  {
+    "parent": 2,
+    "name": "NACC",
+    "value": 2094
+  },
+  {
+    "parent": 2,
+    "name": "NIA-AD FBS",
+    "value": 2
+  },
+  {
+    "parent": 3,
+    "name": "ACT",
+    "value": 532
+  },
+  {
+    "parent": 3,
+    "name": "MAP - Rush",
+    "value": 1056
+  },
+  {
+    "parent": 3,
+    "name": "MARS",
+    "value": 63
+  },
+  {
+    "parent": 3,
+    "name": "NACC",
+    "value": 19899
+  },
+  {
+    "parent": 3,
+    "name": "NIA-AD FBS",
+    "value": 570
+  },
+  {
+    "parent": 3,
+    "name": "ROS",
+    "value": 900
+  },
+  {
+    "parent": 4,
+    "name": "ADNI",
+    "value": 1577
+  },
+  {
+    "parent": 4,
+    "name": "EFIGA",
+    "value": 5965
+  },
+  {
+    "parent": 4,
+    "name": "MAP - Rush",
+    "value": 2220
+  },
+  {
+    "parent": 4,
+    "name": "MARS",
+    "value": 802
+  },
+  {
+    "parent": 4,
+    "name": "NACC",
+    "value": 41172
+  },
+  {
+    "parent": 4,
+    "name": "NIA-AD FBS",
+    "value": 405
+  },
+  {
+    "parent": 4,
+    "name": "ROS",
+    "value": 1478
+  },
+  {
+    "parent": 4,
+    "name": "WHICAP",
+    "value": 1823
+  },
+  {
+    "parent": 4,
+    "name": "WRAP",
+    "value": 1634
+  }
+]
