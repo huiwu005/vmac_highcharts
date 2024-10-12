@@ -9,7 +9,7 @@ Highcharts.AST.allowedAttributes.push('onmousedown')
 
 Highcharts.chart("chart_psv2_preScreen", {
   chart: {
-    borderWidth: 1,
+    // borderWidth: 1,
     plotBackgroundColor: null,
     plotBorderWidth: null,
     plotShadow: false,
