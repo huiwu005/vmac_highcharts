@@ -1,0 +1,42 @@
+[
+  {
+    "x": "2021-09-01 00:00:00 UTC",
+    "name": "U24-AG074855 Funded ",
+    "label": "U24-AG074855 Funded "
+  },
+  {
+    "x": "2022-10-01 00:00:00 UTC",
+    "name": "Freeze 1 NIAGADS ng00067",
+    "label": "Freeze 1 NIAGADS ng00067"
+  },
+  {
+    "x": "2023-04-01 00:00:00 UTC",
+    "name": "ISTAART \"Basics of Data Harmonization\" webinar",
+    "label": "ISTAART \"Basics of Data Harmonization\" webinar"
+  },
+  {
+    "x": "2023-07-01 00:00:00 UTC",
+    "name": "AAIC 2023 Pre-Conference: ADSP-PHC Data Access & Application",
+    "label": "AAIC 2023 Pre-Conference: ADSP-PHC Data Access & Application"
+  },
+  {
+    "x": "2023-12-01 00:00:00 UTC",
+    "name": "Freeze 2 NIAGADS ng00067.v11",
+    "label": "Freeze 2 NIAGADS ng00067.v11"
+  },
+  {
+    "x": "2024-03-01 00:00:00 UTC",
+    "name": "ISTAART \"Basics of Neuroimaging Data Harmonization\" webinar",
+    "label": "ISTAART \"Basics of Neuroimaging Data Harmonization\" webinar"
+  },
+  {
+    "x": "2024-06-01 00:00:00 UTC",
+    "name": "2024 ADSP-PHC Investigator's Meeting",
+    "label": "2024 ADSP-PHC Investigator's Meeting"
+  },
+  {
+    "x": "2024-07-01 00:00:00 UTC",
+    "name": "AAIC 2024 Pre-Conference: ADSP-PHC Neuroimaging Harmonization & Application",
+    "label": "AAIC 2024 Pre-Conference: ADSP-PHC Neuroimaging Harmonization & Application"
+  }
+]
