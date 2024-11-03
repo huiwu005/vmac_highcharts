@@ -12,7 +12,7 @@ const geoids_json = await fetch("files/data2.json") ;
 const geoids = await geoids_json.json();
 
 var data = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county']),
-  separators = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county'], 'mapline'),
+  // separators = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county'], 'mapline'),
   // Some responsiveness
   small = $('#chart_es3').width() < 400;
 
@@ -29,7 +29,7 @@ $.each(data, function(i) {
 // Instantiate the map
 Highcharts.mapChart('chart_es3', {
   chart: {
-    borderWidth: 1,
+    // borderWidth: 1,
     events: {
       drilldown: function(e) {
         if (!e.seriesOptions) {
@@ -50,9 +50,6 @@ Highcharts.mapChart('chart_es3', {
           chart.showLoading('<i class="icon-spinner icon-spin icon-3x"></i>'); // Font Awesome spinner
 
           // Load the drilldown map
-					// console.log("mapKey",mapKey);
-          // $.getScript('https://code.highcharts.com/mapdata/' + mapKey + '.js', function() {
-
           data = Highcharts.geojson(Highcharts.maps[mapKey],'map');
           var zipcode_boundaries = data.filter(function(item) {
               var layer = item.properties.layer;
@@ -63,8 +60,6 @@ Highcharts.mapChart('chart_es3', {
               return layer.includes('GEOID')
           });
           
-          // console.log("zipcode_boundaries",zipcode_boundaries);
-
           var ddSeries = [
             {
               name: e.point.name,
@@ -93,7 +88,6 @@ Highcharts.mapChart('chart_es3', {
           clearTimeout(fail);
           chart.addSeriesAsDrilldown(e.point, ddSeries[0]
           );
-          // });
         }
 
         this.setTitle(null, {
@@ -107,40 +101,28 @@ Highcharts.mapChart('chart_es3', {
       }
     }
   },
-
   title: {
-    text: 'Highcharts Map Drilldown'
+    text: 'Tennessee State Map by County'
   },
-
   subtitle: {
-    text: '',
-    floating: true,
-    align: 'right',
-    y: 50,
-    style: {
-      fontSize: '16px'
-    }
+    text: 'drilldown to ZIPCODE'
   },
-
   legend: small ? {} : {
     layout: 'vertical',
     align: 'right',
     verticalAlign: 'middle'
   },
-
   colorAxis: {
     min: 0,
     minColor: '#E6E7E8',
     maxColor: '#005645'
   },
-
   mapNavigation: {
     enabled: true,
     buttonOptions: {
       verticalAlign: 'bottom'
     }
   },
-
   plotOptions: {
     map: {
       states: {
@@ -150,7 +132,6 @@ Highcharts.mapChart('chart_es3', {
       }
     }
   },
-
   series: [{
     data: data,
     name: 'TN',
@@ -158,14 +139,14 @@ Highcharts.mapChart('chart_es3', {
       enabled: true,
       format: '{point.properties.NAME}'
     }
-  }, {
-    type: 'mapline',
-    data: separators,
-    color: 'silver',
-    enableMouseTracking: false,
-    animation: {
-      duration: 500
-    }
+  // }, {
+  //   type: 'mapline',
+  //   data: separators,
+  //   color: 'silver',
+  //   enableMouseTracking: false,
+  //   animation: {
+  //     duration: 500
+    // }
   }],
 
   drilldown: {

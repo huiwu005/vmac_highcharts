@@ -1,0 +1,67 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+crossorigin="anonymous">
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/venn.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script type="module" src="venn_diagram_mega.js"></script>
+<script type="module" src="venn_diagram_agd.js"></script>
+<script type="module" src="venn_diagram_test.js"></script>
+<!-- <link rel="stylesheet" href="../assets/css/styles.css"> -->
+
+<div class="container">
+  <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
+  <a href="../core/"><h1>Highcharts Core</h1></a>
+
+  <h2>Venn Diagram</h2>
+  <br>
+  <div class="container border">
+    <div class="row">
+      <div class="col-6">
+        <h4>Highcharts</h4>
+        <figure class="highcharts-figure">
+          <div id="chart_venn"></div>
+        </figure>
+      </div>
+      <div class="col-6">
+        <h4>R ggvenn</h4>
+        <img src="files/elig_megaex_v4.png" width="450">
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-6">
+        <h4>Highcharts</h4>
+        <figure class="highcharts-figure">
+          <div id="chart_venn_test"></div>
+        </figure>
+      </div>
+      <div class="col-6">
+        <h4>R ggvenn</h4>
+        <img src="files/test.png" width="450">
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-6">
+        <h4>Highcharts</h4>
+        <figure class="highcharts-figure">
+          <div id="chart_venn_agd"></div>
+        </figure>
+      </div>
+      <div class="col-6">
+        <h4>R ggvenn</h4>
+        <img src="files/agd.png" width="450">
+      </div>
+    </div>
+
+  </div>
+</div>
