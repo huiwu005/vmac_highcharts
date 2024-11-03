@@ -1,0 +1,318 @@
+﻿main_category,category,anchor,cohort,variable,label,units,type
+Cognition,Executive Function,Executive Function Anchor,ADNI,dspanbac,WAIS-R: Digit Span Backward Total Correct,,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,traascor,Trails A Time to Complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,trabscor,Trails B Time to complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,digitscor,WAIS-R: Digit Symbol Total Correct,,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,dspanfor,WAIS-R: Digit Span Forward Total Correct,,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,absmeas,MoCA: Abstraction: watch-ruler,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,abstran,MoCA: Abstraction: train-bicycle,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,trails,MoCA: Trails,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,digback,MoCA: Digits Backward,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,digfor,MoCA: Digits Forward,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,letters,MoCA: List of Letters/Tapping: # Errors,,Integer
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmdltr,MMSE: Spell WORLD backward: Letter 1,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmlltr,MMSE: Spell WORLD backward: Letter 2,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmrltr,MMSE: Spell WORLD backward: Letter 3,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmoltr,MMSE: Spell WORLD backward: Letter 4,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmwltr,MMSE: Spell WORLD backward: Letter 5,,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmltr1,Indicate 1st letter (of WORLD backwards),,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmltr2,Indicate 2nd letter (of WORLD backwards),,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmltr3,Indicate 3rd letter (of WORLD backwards),,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmltr4,Indicate 4th letter (of WORLD backwards),,String
+Cognition,Executive Function,Executive Function Anchor,ADNI,mmltr5,Indicate 5th letter (of WORLD backwards),,String
+Cognition,Executive Function,Executive Function Anchor,ACT,tr_a_tm,Trails A time to complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,ACT,tr_b_tm,Trails B time to complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,NACC,traila,Trails A: Time to complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,NACC,trailb,Trails B: Time to complete,seconds,Integer
+Cognition,Executive Function,Executive Function Anchor,NACC,mocatrai,MoCA: Trails ,,String
+Cognition,Executive Function,Executive Function Anchor,NACC,mocaabst,MoCA: Abstraction,,String
+Cognition,Executive Function,Executive Function Anchor,NACC,mocalett,MoCA: Attention - letter A,,String
+Cognition,Executive Function,Executive Function Anchor,NACC,mocadigi,MoCA: Attention - digits,,String
+Cognition,Executive Function,Executive Function Anchor,NACC,wais,WAIS-R Digit Symbol,,Integer
+Cognition,Executive Function,Executive Function Anchor,NACC,digib,WAIS-R Digit Span Backward: Total correct,,Integer
+Cognition,Executive Function,Executive Function Anchor,NACC,digif,WAIS-R Digit Span Forward: Total correct ,,Integer
+Cognition,Executive Function,Executive Function Anchor,ROSMAP,mmse30_item26_dlr,MMSE: Spell WORLD backwards,,Integer
+Cognition,Executive Function,Executive Function Anchor,ROSMAP,cts_db,WAIS-R: Digit Span Backward Total Correct,,Integer
+Cognition,Executive Function,Executive Function Anchor,ROSMAP,cts_df,WAIS-R: Digit Span Forward Total Correct,,Integer
+Cognition,Language,Language Anchor,ADNI,catanimsc,Category Fluency (Animals) -Total Correct,,Integer
+Cognition,Language,Language Anchor,ADNI,catvegesc,Category Fluency (Vegetables) -Total Correct,,Integer
+Cognition,Language,Language Anchor,ADNI,bnttotal,BNT: Boston Naming Test: Total Number Correct (1+3),,Integer
+Cognition,Language,Language Anchor,ADNI,mmrepeat,"MMSE: Repeat after me: no ifs, ands, or buts.",,String
+Cognition,Language,Language Anchor,ADNI,mmhand,MMSE: Takes paper in right hand,,String
+Cognition,Language,Language Anchor,ADNI,mmfold,MMSE: Folds paper in half,,String
+Cognition,Language,Language Anchor,ADNI,mmonflr,MMSE: Puts paper on floor,,String
+Cognition,Language,Language Anchor,ADNI,mmread,MMSE: Present the piece of paper which reads,,String
+Cognition,Language,Language Anchor,ADNI,mmwrite,MMSE: Write a sentence.,,String
+Cognition,Language,Language Anchor,ADNI,camel,MoCA: Camel naming,,String
+Cognition,Language,Language Anchor,ADNI,lion,MoCA: Lion naming,,String
+Cognition,Language,Language Anchor,ADNI,rhino,MoCA: Rhinoceros naming,,String
+Cognition,Language,Language Anchor,ADNI,repeat1,MoCA: Repeat Sentence,,String
+Cognition,Language,Language Anchor,ADNI,repeat2,MoCA: Repeat Sentence,,String
+Cognition,Language,Language Anchor,ADNI,ffluency,MoCA: Letter Fluency-F (total number of correct words),,Integer
+Cognition,Language,Language Anchor,ACT,bnt_cer,CERAD: Boston Naming   Test - 15-item version,,Integer
+Cognition,Language,Language Anchor,ACT,v_flu_t,Category Fluency (Animals) - Total Correct,,Integer
+Cognition,Language,Language Anchor,ACT,cas_read,CASI: read and follow a command,,String
+Cognition,Language,Language Anchor,ACT,cmd,CASI: obey oral commands,,Integer
+Cognition,Language,Language Anchor,NACC,mocarepe,MoCA: language -   repetition,,Integer
+Cognition,Language,Language Anchor,NACC,mocanami,"MoCA: language -   naming (lion, camel, rhino)",,Integer
+Cognition,Language,Language Anchor,NACC,animals,Category Fluency (Animals) - Total Correct,,Integer
+Cognition,Language,Language Anchor,NACC,boston,Boston Naming Test:   Total number correct (1+3),,Integer
+Cognition,Language,Language Anchor,NACC,veg,Category Fluency (Vegetables) - Total Correct,,Integer
+Cognition,Language,Language Anchor,NACC,udsverfc,MAE: Letter Fluency   - F (total number of correct words),,Integer
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item19,MMSE: Repeat a phrase,,String
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item20,"MMSE: Read the words on this card, then do what it says ",,String
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item21,MMSE: Take paper in right hand,,String
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item22,MMSE: Fold paper in half,,String
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item23,MMSE: Puts paper on lap,,String
+Cognition,Language,Language Anchor,ROSMAP,mmse30_item24,MMSE: Write any complete sentence ,,String
+Cognition,Language,Language Anchor,ROSMAP,cts_bname,CERAD: Boston Naming Test - 15-item version,,Integer
+Cognition,Language,Language Anchor,ROSMAP,cts_animals,Category Fluency (Animals) - Total Correct,,Integer
+Cognition,Memory,Memory Anchor,ADNI,limmtotal,WMS-R: Logical Memory-Immediate Recall (AT),,Integer
+Cognition,Memory,Memory Anchor,ADNI,ldeltotal,WMS-R: Logical Memory-Delayed Recall (AT),,Integer
+Cognition,Memory,Memory Anchor,ADNI,mmdate,MMSE: What is today's date?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmyear,MMSE: What is the year?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmmonth,MMSE: What is the month?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmday,MMSE: What day of the week is today?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmseason,MMSE: What season is it?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmhospit,"MMSE: What is the name of this hospital (clinic, place)?",,String
+Cognition,Memory,Memory Anchor,ADNI,mmfloor,MMSE: What floor are we on?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmcity,MMSE: What town or city are we in?,,String
+Cognition,Memory,Memory Anchor,ADNI,mmarea,"MMSE: What County (district, borough, area) are we in?",,String
+Cognition,Memory,Memory Anchor,ADNI,mmstate,MMSE: What state are we in?,,String
+Cognition,Memory,Memory Anchor,ADNI,immt1w1,Immediate (#1): Face,,String
+Cognition,Memory,Memory Anchor,ADNI,immt1w2,Immediate (#1): Velvet,,String
+Cognition,Memory,Memory Anchor,ADNI,immt1w3,Immediate (#1): Church,,String
+Cognition,Memory,Memory Anchor,ADNI,immt1w4,Immediate (#1): Daisy,,String
+Cognition,Memory,Memory Anchor,ADNI,immt1w5,Immediate (#1): Red,,String
+Cognition,Memory,Memory Anchor,ADNI,immt2w1,Immediate (#2): Face,,String
+Cognition,Memory,Memory Anchor,ADNI,immt2w2,Immediate (#2): Velvet,,String
+Cognition,Memory,Memory Anchor,ADNI,immt2w3,Immediate (#2): Church,,String
+Cognition,Memory,Memory Anchor,ADNI,immt2w4,Immediate (#2): Daisy,,String
+Cognition,Memory,Memory Anchor,ADNI,immt2w5,Immediate (#2): Red,,String
+Cognition,Memory,Memory Anchor,ADNI,delw1,Delayed: Face,,String
+Cognition,Memory,Memory Anchor,ADNI,delw2,Delayed: Velvet,,String
+Cognition,Memory,Memory Anchor,ADNI,delw3,Delayed: Church,,String
+Cognition,Memory,Memory Anchor,ADNI,delw4,Delayed: Daisy,,String
+Cognition,Memory,Memory Anchor,ADNI,delw5,Delayed: Red,,String
+Cognition,Memory,Memory Anchor,ACT,w_lm_ima,WMS-R:Logical Mem I-immediate recall total story (AT*),,Integer
+Cognition,Memory,Memory Anchor,ACT,w_lm_dea,WMS-R:Logical Mem II-delayed recall total story (AT),,Integer
+Cognition,Memory,Memory Anchor,ACT,yr,CASI: What is today's date?-year,,String
+Cognition,Memory,Memory Anchor,ACT,mo,CASI: What is today's date?-month,,String
+Cognition,Memory,Memory Anchor,ACT,casi_dat,CASI: What is today's date?-day,,String
+Cognition,Memory,Memory Anchor,ACT,day,CASI: What day of week?,,String
+Cognition,Memory,Memory Anchor,ACT,casi_ssn,CASI: What season is it?,,String
+Cognition,Memory,Memory Anchor,ACT,spa,CASI: What state and city?,,String
+Cognition,Memory,Memory Anchor,NACC,mmseorda,MMSE Orientation subscale score - time,,Integer
+Cognition,Memory,Memory Anchor,NACC,mmseorlo,MMSE Orientation subscale score - place,,Integer
+Cognition,Memory,Memory Anchor,NACC,mocaordt,MoCA orientation - date,,String
+Cognition,Memory,Memory Anchor,NACC,mocaordy,MoCA orientation - day,,String
+Cognition,Memory,Memory Anchor,NACC,mocaormo,MoCA orientation - month,,String
+Cognition,Memory,Memory Anchor,NACC,mocaoryr,MoCA orientation - year,,String
+Cognition,Memory,Memory Anchor,NACC,mocaorct,MoCA orientation - city,,String
+Cognition,Memory,Memory Anchor,NACC,mocaorpl,MoCA orientation - place,,String
+Cognition,Memory,Memory Anchor,NACC,mocarecn,MoCA delayed recall - no cue,,Integer
+Cognition,Memory,Memory Anchor,NACC,logimem,Logical Memory Immediate A: Story units recalled (Story A),,Integer
+Cognition,Memory,Memory Anchor,NACC,memunits,Logical Memory Delayed A: Story units recalled (Story A),,Integer
+Cognition,Memory,Memory Anchor,NACC,mocaregi,MoCA memory: registration (2 trials),,Integer
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item1,MMSE: What is the year?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item2,MMSE: What is the season of the year?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item3,MMSE: What is the date?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item4,MMSE: What is the day of the week?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item5,MMSE: What is the month?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item6,MMSE: What state are we in?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item7,MMSE: What County are we in?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item8,MMSE: What city are we in?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item9,MMSE: What room are we in?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item10a,What is the address of this place? Street number?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,mmse30_item10b,What is the address of this place? Street name?,,String
+Cognition,Memory,Memory Anchor,ROSMAP,cts_story,WMS-R: Logical memory (AT),,Integer
+Cognition,Memory,Memory Anchor,ROSMAP,cts_delay,WMS-R: Tell me the story again (AT),,Integer
+Cognition,Visuospatial,Visuospatial Anchor,ADNI,mmdraw,MMSE: Copy interlocking pentagons,,String
+Cognition,Visuospatial,Visuospatial Anchor,ACT,draw,CASI: Copy interlocking pentagons,,Integer
+Cognition,Visuospatial,Visuospatial Anchor,ROSMAP,mmse30_item25,MMSE: Copy interlocking pentagons,,String
+Clinical & Demographic,Demographics,,,study,Study Name,,String
+Clinical & Demographic,Demographics,,,ID,Cohort Specific ID,,String
+Clinical & Demographic,Demographics,,,subject_key,ADSP ID,,String
+Clinical & Demographic,Demographics,,,sequencing,Sequencing Data Available on NIAGADS,,String
+Clinical & Demographic,Demographics,,,phc_visit,Visit Number,,Integer
+Clinical & Demographic,Demographics,,,age,Age,years,Number
+Clinical & Demographic,Demographics,,,FollowUp_Time,Follow Up Time,years,Number
+Clinical & Demographic,Demographics,,,sex,Sex,,String
+Clinical & Demographic,Demographics,,,race,Race,,String
+Clinical & Demographic,Demographics,,,ethnicity,Ethnicity,,String
+Clinical & Demographic,Demographics,,,education,Education,years,Integer
+Clinical & Demographic,Clinical,,,diagnosis,Cognitive Diagnosis,,String
+Cognition,Memory,,ADNI,avtot1,Rey: AVLT Trial 1 Total,,Integer
+Cognition,Memory,,ADNI,avtot2,Rey: AVLT Trial 2 Total,,Integer
+Cognition,Memory,,ADNI,avtot3,Rey: AVLT Trial 3 Total,,Integer
+Cognition,Memory,,ADNI,avtot4,Rey: AVLT Trial 4 Total,,Integer
+Cognition,Memory,,ADNI,avtot5,Rey: AVLT Trial 5 Total,,Integer
+Cognition,Memory,,ADNI,avtot6,Rey: AVLT Trial 6 Total,,Integer
+Cognition,Memory,,ADNI,avtotb,Rey: AVLT List B Total,,Integer
+Cognition,Memory,,ADNI,avdel30min,Rey: AVLT 30 Minute Delay Total,,Integer
+Cognition,Memory,,ADNI,avdeltot,Rey: AVLT Recognition Score,,Integer
+Cognition,Memory,,ADNI,mmword1,MMSE: ball-immediate recall,,String
+Cognition,Memory,,ADNI,mmword2,MMSE: flag-immediate recall,,String
+Cognition,Memory,,ADNI,mmword3,MMSE: tree-immediate recall,,String
+Cognition,Memory,,ADNI,mmword1dl,MMSE: ball-delayed recall,,String
+Cognition,Memory,,ADNI,mmword2dl,MMSE: flag-delayed recall,,String
+Cognition,Memory,,ADNI,mmword3dl,MMSE: tree-delayed recall,,String
+Cognition,Memory,,ADNI,q1score,ADAS-Cog: Word Recall-score,,Number
+Cognition,Memory,,ADNI,q4score,ADAS-Cog: Delayed Word Recall,,Integer
+Cognition,Memory,,ADNI,q7score,ADAS-Cog: Orientation-score,,Integer
+Cognition,Memory,,ADNI,q8score,ADAS-Cog: Word Recognition-score,,Integer
+Cognition,Memory,,ACT,mat_mem,DRS: Mattis Dementia Rating Scale Memory score,,Integer
+Cognition,Memory,,ACT,w_in_c1,CERAD: Word list learning trial 1 total score,,Integer
+Cognition,Memory,,ACT,w_in_c2,CERAD: Word list learning trial 2 total score,,Integer
+Cognition,Memory,,ACT,w_in_c3,CERAD: Word list learning trial 3 total score,,Integer
+Cognition,Memory,,ACT,w_rcl_c,CERAD: Word List Recall-correct,,Integer
+Cognition,Memory,,ACT,w_rcg_t,CERAD: Word Recognition-total correct,,Integer
+Cognition,Memory,,ACT,cp_re_ci,CERAD: Constructional Praxis Delay-circle,,Integer
+Cognition,Memory,,ACT,cp_re_di,CERAD: Constructional Praxis Delay-diamond,,Integer
+Cognition,Memory,,ACT,cr_re_re,CERAD: Constructional Praxis Delay-rectangles,,Integer
+Cognition,Memory,,ACT,cp_re_cu,CERAD: Constructional Praxis Delay-cube,,Integer
+Cognition,Memory,,ACT,w_lm_imb,WMS-R:Logical Mem I-immediate recall total story (RMI),,Integer
+Cognition,Memory,,ACT,w_lm_deb,WMS-R:Logical Mem II-delayed recall total story (RM),,Integer
+Cognition,Memory,,ACT,w_vp_ine,WMS-R:Verbal Paired Associates I easy,,Integer
+Cognition,Memory,,ACT,w_vp_inh,WMS-R:Verbal Paired Associates I hard,,Integer
+Cognition,Memory,,ACT,w_vp_ree,WMS-R:Verbal Paired Associates II easy,,Integer
+Cognition,Memory,,ACT,w_vp_reh,WMS-R:Verbal Paired Associates IIhard,,Integer
+Cognition,Memory,,ACT,rgs1,CASI: repeat words,,Integer
+Cognition,Memory,,ACT,rc1a,CASI: Word recall-something to wear - 1,,String
+Cognition,Memory,,ACT,rc1b,CASI: Word recall-a color - 1,,String
+Cognition,Memory,,ACT,rc1c,CASI: Word recall-personal quality - 1,,String
+Cognition,Memory,,ACT,spb,CASI: What is this place?,,String
+Cognition,Memory,,ACT,rc2a,CASI: Word recall-something to wear - 2,,String
+Cognition,Memory,,ACT,rc2b,CASI: Word recall-a color - 2,,String
+Cognition,Memory,,ACT,rc2c,CASI: Word recall-personal quality - 2,,String
+Cognition,Memory,,ACT,rcobj,CASI: Recall of 5 objects,,Integer
+Cognition,Memory,,NACC,craftdvr,Craft story 21 recall (delayed): paraphrase,,Integer
+Cognition,Memory,,NACC,craftvrs,Craft story 21 recall (delayed): verbatim,,Integer
+Cognition,Memory,,NACC,udsbentd,"Benson complex figure copy, delayed",,Integer
+Cognition,Memory,,NACC,udsbenrs,Benson complex figure recognition,,String
+Cognition,Memory,,ROSMAP,mmse30_item11,MMSE: apple (immediate recall),,String
+Cognition,Memory,,ROSMAP,mmse30_item12,MMSE: table (immediate recall),,String
+Cognition,Memory,,ROSMAP,mmse30_item13,MMSE: penny (immediate recall),,String
+Cognition,Memory,,ROSMAP,mmse30_item14,MMSE: apple (delayed recall),,String
+Cognition,Memory,,ROSMAP,mmse30_item15,MMSE: table (delayed recall),,String
+Cognition,Memory,,ROSMAP,mmse30_item16,MMSE: penny (delayed recall),,String
+Cognition,Memory,,ROSMAP,cts_wliii,CERAD: Word list recognition,,Integer
+Cognition,Memory,,ROSMAP,cts_wlii,CERAD: Word list recall,,Integer
+Cognition,Memory,,ROSMAP,cts_ebmt,East Boston Memory Test-immediate recall,,Integer
+Cognition,Memory,,ROSMAP,cts_ebdr,East Boston Memory Test-delayed recall,,Integer
+Cognition,Memory,,ROSMAP,wli_item1,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item2,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item3,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item4,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item5,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item6,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item7,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item8,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item9,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item10,CERAD: Word list learning Trial 1 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item11,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item12,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item13,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item14,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item15,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item16,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item17,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item18,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item19,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item20,CERAD: Word list learning Trial 2 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item21,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item22,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item23,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item24,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item25,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item26,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item27,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item28,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item29,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,ROSMAP,wli_item30,CERAD: Word list learning Trial 3 (10 items collapsed),,String
+Cognition,Memory,,Harmonized,PHC_MEM,Harmonized Composite Memory Score,,Number
+Cognition,Executive Function,,ADNI,clockcirc,Approximately circular face,,String
+Cognition,Executive Function,,ADNI,clocksym,Symmetry of number placement,,String
+Cognition,Executive Function,,ADNI,clocknum,Correctness of numbers,,String
+Cognition,Executive Function,,ADNI,clockhand,Presence of the two hands,,String
+Cognition,Executive Function,,ADNI,clocktime,"Presence of the two hands, set to ten after eleven",,String
+Cognition,Executive Function,,ADNI,q13score,ADAS-Cog: Number cancellation task,,Integer
+Cognition,Executive Function,,ADNI,serial1,MoCA: Serial 7: 1st Subtraction,,String
+Cognition,Executive Function,,ADNI,serial2,MoCA: Serial 7: 2nd Subtraction,,String
+Cognition,Executive Function,,ADNI,serial3,MoCA: Serial 7: 3rd Subtraction,,String
+Cognition,Executive Function,,ADNI,serial4,MoCA: Serial 7: 4th Subtraction,,String
+Cognition,Executive Function,,ADNI,serial5,MoCA: Serial 7: 5th Subtraction,,String
+Cognition,Executive Function,,ACT,mat_attn,"DRS: Mattis Dementia Rating Scale, Attention score",,Integer
+Cognition,Executive Function,,ACT,mat_conc,"DRS: Mattis Dementia Rating Scale, Concentration score",,Integer
+Cognition,Executive Function,,ACT,mat_ip,"DRS: Mattis Dementia Rating Scale, initiation / perseveration score",,Integer
+Cognition,Executive Function,,ACT,clockdr,Clock drawing,,Integer
+Cognition,Executive Function,,ACT,dba,CASI: repeat numbers backward (3 trials collapsed),,String
+Cognition,Executive Function,,ACT,dbb,CASI: repeat numbers backward (3 trials collapsed),,String
+Cognition,Executive Function,,ACT,dbc,CASI: repeat numbers backward (3 trials collapsed),,String
+Cognition,Executive Function,,ACT,sub3a,CASI: Subtraction (3 trials collapsed),,String
+Cognition,Executive Function,,ACT,sub3b,CASI: Subtraction (3 trials collapsed),,String
+Cognition,Executive Function,,ACT,sub3c,CASI: Subtraction (3 trials collapsed),,Integer
+Cognition,Executive Function,,ACT,sim,CASI: similarities,,Integer
+Cognition,Executive Function,,ACT,jgmt,CASI: judgement,,Integer
+Cognition,Executive Function,,NACC,mocacloc,MoCA: Draw clock circle in place,,String
+Cognition,Executive Function,,NACC,mocaclon,MoCA: Draw clock numbers in place,,String
+Cognition,Executive Function,,NACC,mocacloh,MoCA: Draw clock hands in place,,String
+Cognition,Executive Function,,NACC,mocaser7,MoCA: Attention - serial 7s,,Integer
+Cognition,Executive Function,,NACC,digbacct,Number Span Backward - correct,,Integer
+Cognition,Executive Function,,NACC,digforct,Number Span Forward - correct,,Integer
+Cognition,Executive Function,,ROSMAP,cts_pmat,Raven Progressive Matrices composite,,Integer
+Cognition,Executive Function,,ROSMAP,cts_doperf,Digit Ordering composite,,Integer
+Cognition,Executive Function,,ROSMAP,cts_sdmt,Symbol digit modality test (oral),,Integer
+Cognition,Executive Function,,ROSMAP,cts_nccrtd,Number comparison,,Integer
+Cognition,Executive Function,,Harmonized,PHC_EXF,Harmonized Composite Executive Function Score,,Number
+Cognition,Language,,ADNI,q2score,ADAS-Cog: Commands,,Integer
+Cognition,Language,,ADNI,q5score,ADAS-Cog: Naming,,Integer
+Cognition,Language,,ADNI,q6score,ADAS-Cog: Ideational Praxis-score,,Integer
+Cognition,Language,,ACT,bnt_adpr,Boston Naming Test -   10-item version,,Integer
+Cognition,Language,,ACT,animal,CASI: animals with 4 legs,,Integer
+Cognition,Language,,ACT,rpta,CASI: repeat phrase - 1,,String
+Cognition,Language,,ACT,rptb,CASI: repeat phrase - 2,,Integer
+Cognition,Language,,ACT,cas_writ,CASI: write a sentence,,Integer
+Cognition,Language,,ACT,body,CASI: identify parts of body,,Integer
+Cognition,Language,,ACT,obja,CASI: identify objects - 1,,Integer
+Cognition,Language,,ACT,objb,CASI: identify objects - 2,,Integer
+Cognition,Language,,NACC,minttots,Multilingual naming test (MINT) - total score,,Integer
+Cognition,Language,,NACC,udsverlc,MAE: Letter Fluency   - L (total number of correct words),,Integer
+Cognition,Language,,ROSMAP,mmse30_item26_wor,MMSE: Spell WORLD forwards,,String
+Cognition,Language,,ROSMAP,cts_clothing,Category Fluency (Clothing) - Total Correct,,Integer
+Cognition,Language,,ROSMAP,cts_fruits,Category Fluency (Fruits) - Total Correct,,Integer
+Cognition,Language,,ROSMAP,idea_item1,Complex ideation: Will a board sink in water?,,String
+Cognition,Language,,ROSMAP,idea_item2,Complex ideation: Will a stone sink in water?,,String
+Cognition,Language,,ROSMAP,idea_item3,Complex ideation: Is a hammer good for cutting wood?,,String
+Cognition,Language,,ROSMAP,idea_item4,Complex ideation: Can you use a hammer to pound nails?,,String
+Cognition,Language,,ROSMAP,idea_item5,Complex ideation: Do two pounds of flour weigh more than one?,,String
+Cognition,Language,,ROSMAP,idea_item6,Complex ideation: Is one pound of flour heavier than two?,,String
+Cognition,Language,,ROSMAP,idea_item7,Complex ideation: Will water go through a good pair of rubber boots?,,String
+Cognition,Language,,ROSMAP,idea_item8,Complex ideation: Will a good pair of rubber boots keep water out?,,String
+Cognition,Language,,Harmonized,PHC_LAN,Harmonized Composite Language Score,,Number
+Cognition,Visuospatial,,ADNI,copycirc,Clock copy:  Approximately circular face,,String
+Cognition,Visuospatial,,ADNI,copysym,Clock copy: Symmetry of number placement,,String
+Cognition,Visuospatial,,ADNI,copynum,Clock copy: Correctness of numbers,,String
+Cognition,Visuospatial,,ADNI,copytime,"Clock copy: Presence of the two hands, set to ten after eleven",,String
+Cognition,Visuospatial,,ADNI,q3score,ADAS-Cog: Constructional Praxis-score,,Integer
+Cognition,Visuospatial,,ACT,mat_cons,DRS: Mattis Dementia Rating Scale-constructional praxis score,,Integer
+Cognition,Visuospatial,,ACT,cp_in_ci,CERAD: Constructional Praxis-circle,,Integer
+Cognition,Visuospatial,,ACT,cp_in_di,CERAD: Constructional Praxis-diamond,,Integer
+Cognition,Visuospatial,,ACT,cp_in_re,CERAD: Constructional Praxis-rectangles,,Integer
+Cognition,Visuospatial,,ACT,cp_in_cu,CERAD: Constructional Praxis-cube,,Integer
+Cognition,Visuospatial,,ROSMAP,lopair_item1,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item2,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item3,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item4,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item5,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item6,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item7,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item8,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item9,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item10,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item11,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item12,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item13,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item14,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,ROSMAP,lopair_item15,JLO: Line orientation items (15 items),,String
+Cognition,Visuospatial,,Harmonized,PHC_VSP,Harmonized Composite Visuospatial Score,,Number
