@@ -1,0 +1,122 @@
+{
+  "prescreen-call_comp": {
+      "id": "prescreen-call_comp",
+      "value": 2.8333333333333335,
+      "color": "#2caffe",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 1
+  },
+  "prescreen-call_incomp": {
+      "id": "prescreen-call_incomp",
+      "value": 1,
+      "color": "#544fc5",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 1
+  },
+  "prescreen-email": {
+      "id": "prescreen-email",
+      "value": 0,
+      "color": "#00e272",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 1
+  },
+  "prescreen-letter": {
+      "id": "prescreen-letter",
+      "value": 0,
+      "color": "#fe6a35",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 1
+  },
+  "prescreen-text": {
+      "id": "prescreen-text",
+      "value": 0,
+      "color": "#6b8abc",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 1
+  },
+  "regenroll-call_comp": {
+      "id": "regenroll-call_comp",
+      "value": 1.5,
+      "color": "#2caffe",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 3
+  },
+  "regenroll-call_incomp": {
+      "id": "regenroll-call_incomp",
+      "value": 0.25,
+      "color": "#544fc5",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 3
+  },
+  "regenroll-email": {
+      "id": "regenroll-email",
+      "value": 0,
+      "color": "#00e272",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 3
+  },
+  "regenroll-letter": {
+      "id": "regenroll-letter",
+      "value": 0,
+      "color": "#fe6a35",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 3
+  },
+  "regenroll-text": {
+      "id": "regenroll-text",
+      "value": 0,
+      "color": "#6b8abc",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 3
+  },
+  "update-call_comp": {
+      "id": "update-call_comp",
+      "value": 0,
+      "color": "#2caffe",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 5
+  },
+  "update-call_incomp": {
+      "id": "update-call_incomp",
+      "value": 0,
+      "color": "#544fc5",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 5
+  },
+  "update-email": {
+      "id": "update-email",
+      "value": 0,
+      "color": "#00e272",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 5
+  },
+  "update-letter": {
+      "id": "update-letter",
+      "value": 0,
+      "color": "#fe6a35",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 5
+  },
+  "update-text": {
+      "id": "update-text",
+      "value": 0,
+      "color": "#6b8abc",
+      "dashStyle": "dash",
+      "width": 2,
+      "yAxis": 5
+  }
+}
