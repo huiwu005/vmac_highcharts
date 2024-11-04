@@ -7,30 +7,24 @@ crossorigin="anonymous">
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/maps/modules/drilldown.js"></script>
 <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/maps/modules/data.js"></script> 
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+<script src="javascripts/tl_rd22_47_RTTYP_IUS/tl_rd22_47037_roads_RTTYP_IUS.geojson.js"></script>
+<script src="javascripts/tl_2023_47/tl_2023_47037.geojson.js"></script>
 <script src="javascripts/tl_2023_47_county.geojson.js"></script>
-<script type="module" src="tn-drilldown.js"></script>
-
-<script>
-for (let i=47001; i<=47189; i+=2) {
-  document.write('<script src="javascripts\/tl_2023_47\/tl_2023_'+i+'.geojson.js"><\/script>');
-}
-</script>
-
+<script type="module" src="davidson.js"></script>
 
 <div class="container">
   <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
   <a href="../maps/"><h1>Highcharts Maps</h1></a>
-  
+
   <div class="container border">
     <figure class="highcharts-figure">
-      <div id="chart_es3" style="height: 600px; min-width: 310px; max-width: auto; margin: 0 auto"></div>
+      <div id="chart_davidson"></div>
     </figure>
   </div>
 </div>
