@@ -3,7 +3,7 @@ const data = await data_json.json();
 
 // var data = series_data_es1;
 
-Highcharts.stockChart('chart_es1',{
+Highcharts.stockChart('combined_col_line',{
     chart: {
         height: 600,
         // borderWidth: 1,

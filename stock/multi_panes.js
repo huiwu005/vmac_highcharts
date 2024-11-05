@@ -3,8 +3,9 @@ const data = await data_json.json();
 const plotLines_json = await fetch("files/ror1_plotlines.json") ;
 const plotLines = await plotLines_json.json();
 
-Highcharts.stockChart('chart_ror1',{
+Highcharts.stockChart('multi_panes',{
   chart: {
+    type: 'spline',
     height: 1000,
     borderWidth: 1,
     marginRight: 60,
