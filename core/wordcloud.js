@@ -3,18 +3,18 @@ const title_exclude = 'variable'
 
 const text1 = await (await fetch('files/wordcloud/ADSP_Metadata.csv')).text();
 text1.split("\n").forEach((line,index) => {
-  var v = line.split(",")[4];
-  if (v != title_exclude) {
-	variables.push(v);
-  }
+    var v = line.split(",")[4];
+    if (v != title_exclude) {
+        variables.push(v);
+    }
 })
 
 const text2 = await (await fetch('files/wordcloud/metadata_20220819_VMAP.csv')).text();
 text2.split("\n").forEach((line,index) => {
-  var v = line.split(",")[2];
-  if (v != title_exclude) {
-	variables.push(v);
-  }
+    var v = line.split(",")[2];
+    if (v != title_exclude) {
+        variables.push(v);
+    }
 })
 
 var  data = variables.reduce((arr, word) => {

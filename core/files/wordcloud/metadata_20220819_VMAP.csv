@@ -252,8 +252,3 @@ Brain Imaging,Brain MRI: Cerebral Small Vessel Disease Markers,lacunar_infarcts_
 Brain Imaging,Brain MRI: Cerebral Small Vessel Disease Markers,swi_usable_factor,Is SWI Data usable?,,
 Brain Imaging,Brain MRI: Cerebral Small Vessel Disease Markers,swi_microbleeds_number,"Total Number of Microbleeds, recoded",,
 Brain Imaging,Brain MRI: Cerebral Small Vessel Disease Markers,swi_microbleeds_number_factor,Microbleeds Present,,
-,Biomarker Availability,csf_availability,,,
-,Biomarker Availability,dna_availability,,,
-,Biomarker Availability,paxgene_availability,,,
-,Biomarker Availability,plasma_availability,,,
-,Biomarker Availability,serum_availability,,,
