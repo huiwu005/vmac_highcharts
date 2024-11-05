@@ -7,16 +7,41 @@ crossorigin="anonymous">
 
 <div class="container">
   <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
+
+  
+  <p><sup>*</sup> Highmaps - Map Collection download link: <a href="https://code.highcharts.com/mapdata/" target="_blank">https://code.highcharts.com/mapdata/</a></p>
   <ul>
-      <li><a href="world.html"><h2>World Map Drilldown</h2></a></li>
-      <li><a href="us.html"><h2>US Map Drilldown</h2></a></li>
-      <li><a href="tn.html"><h2>Tennessee State Map Drilldown to ZIPCODE</h2></a></li>
-      <li><a href="TN-Davidson.html"><h2>TN Davidson County</h2></a></li>
+    <li><a href="world.html"><h2>World Map Drilldown</h2></a></li>
+    <li><a href="us.html"><h2>US Map Drilldown</h2></a></li>
   </ul>
   
-  <center>
-    <embed src="https://www.highcharts.com/demo#highcharts-maps-demo-general" style="width:1200px; height: 60vh;">
-  </center>
-  <p><sup>*</sup> Highmaps - Map Collection download link: <a href="https://code.highcharts.com/mapdata/">https://code.highcharts.com/mapdata/</a></p>
+  <p>For map data, Highchats provides geometry data levels from World to US State County level (hc-key/fips/name). There is no Zip Code level data can be found on Highcharts Maps resources.</p>
+
+  <details><summary>Tennessee GeoJSON</summary>
+    <embed src="https://code.highcharts.com/mapdata/countries/us/us-tn-all.geo.json" style="width:1200px; height: 40vh;">
+  </details>
+  <br>
+  <h2>To obtain map data of zipcode: </h2>
+  <ol>
+    <li>Download Tennessee County Zip Code geometry data from <img src="../assets/images/USCENSUS_IDENTITY_SOLO_BLACK_1.5in_R_no_padding.svg" height="20"></li>
+      <p><b>TIGER/Line Shapefiles® </b><a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php">https://www.census.gov/cgi-bin/geo/shapefiles/index.php</a></p>
+    <li><span style='display:inline;'>Split and create files by County using <a href="gqid.html">QGID
+      <img src="../assets/images/QGID-1.jpeg" height="20" style="vertical-align:middle">
+    </a></span></li>
+    <li>Add header to GeoJSON then convert to Javascript.</li>
+  </ol>
+  <ul>
+    <li><a href="TN-Davidson.html"><h2>TN Davidson County Event Attendence by Zip Code</h2></a></li>
+    <li><a href="tn.html"><h2>TN County Drilldown to Zip Code</h2></a></li>
+  </ul>
+  
+  <br>
+  <h2>Other Map Demos</h2>
+  <details><summary>Open ...</summary>
+    <center>
+      <embed src="https://www.highcharts.com/demo#highcharts-maps-demo-general" style="width:1200px; height: 60vh;">
+    </center>
+
+  </details>
 </div>
 

@@ -1,9 +1,3 @@
-/*
-reference: https://jsfiddle.net/huiwu005/uL7gjqc5/
-TODO:
-- Check data labels after drilling. Label rank? New positions?
-*/
-
 const zipcode_json = await fetch("files/data1.json") ;
 const series_data_es3 = await zipcode_json.json();
 
@@ -11,10 +5,8 @@ const series_data_es3 = await zipcode_json.json();
 const geoids_json = await fetch("files/data2.json") ;
 const geoids = await geoids_json.json();
 
-var data = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county']),
-  // separators = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county'], 'mapline'),
-  // Some responsiveness
-  small = $('#chart_es3').width() < 400;
+var data = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county']);
+var separators = Highcharts.geojson(Highcharts.maps['countries/us/TN/tl_2023_47_county'], 'mapline');
 
 // Set drilldown pointers
 $.each(data, function(i) {
@@ -22,20 +14,18 @@ $.each(data, function(i) {
   this.drilldown = this.properties['GEOID'];
   var geoid = geoids.find(geoid => geoid.geoid == this.properties['GEOID']);
   if (geoid != null) {
-    this.value = geoid.value ; // Non-random bogus data
+    this.value = geoid.value ; 
   }
 });
 
 // Instantiate the map
 Highcharts.mapChart('chart_es3', {
   chart: {
-    // borderWidth: 1,
     events: {
       drilldown: function(e) {
         if (!e.seriesOptions) {
           var chart = this,
             mapKey = 'countries/us/TN/tl_2023_47/tl_2023_' + e.point.drilldown,
-            roadKey = 'countries/us/TN/tl_rd22_47_RTTYP_IUS/tl_rd22_' + e.point.drilldown + '_roads_RTTYP_IUS',
             // Handle error, the timeout is cleared on success
             fail = setTimeout(function() {
               if (!Highcharts.maps[mapKey]) {
@@ -52,42 +42,36 @@ Highcharts.mapChart('chart_es3', {
           // Load the drilldown map
           data = Highcharts.geojson(Highcharts.maps[mapKey],'map');
           var zipcode_boundaries = data.filter(function(item) {
+              var fips = item.properties.county_fips;
               var layer = item.properties.layer;
-              return layer.includes("county_fips")
-          });
-          var county_boundary = data.filter(function(item) {
-              var layer = item.properties.layer;
-              return layer.includes('GEOID')
+              return layer.includes("county_fips") && fips == e.point.drilldown
           });
           
-          var ddSeries = [
-            {
-              name: e.point.name,
-              data: series_data_es3,
-              mapData: zipcode_boundaries,
-              joinBy: ["zipcode", 'code'],
-              fillOpacity: 0.1,
-              dataLabels: {
-                enabled: true,
-                style: {
-                    width: '80px', // force line-wrap
-                    textTransform: 'uppercase',
-                    fontWeight: 'normal',
-                    textOutline: 'none',
-                    color: '#888'
-                },
-                format: '{point.name}<br/>{point.zipcode}'
+          var ddSeries = {
+            name: e.point.name,
+            data: series_data_es3,
+            mapData: zipcode_boundaries,
+            joinBy: ["zipcode", 'code'],
+            fillOpacity: 0.1,
+            dataLabels: {
+              enabled: true,
+              style: {
+                  width: '80px', // force line-wrap
+                  textTransform: 'uppercase',
+                  fontWeight: 'normal',
+                  textOutline: 'none',
+                  color: '#888'
               },
-              tooltip: {
-                  pointFormat: '{point.name} ({point.zipcode}): <b>{point.value}</b>'
-              }
+              format: '{point.name}<br/>{point.zipcode}'
+            },
+            tooltip: {
+                pointFormat: '{point.name} ({point.zipcode}): <b>{point.value}</b>'
             }
-          ];
+          };
           // Hide loading and add series
           chart.hideLoading();
           clearTimeout(fail);
-          chart.addSeriesAsDrilldown(e.point, ddSeries[0]
-          );
+          chart.addSeriesAsDrilldown(e.point, ddSeries);
         }
 
         this.setTitle(null, {
@@ -106,11 +90,6 @@ Highcharts.mapChart('chart_es3', {
   },
   subtitle: {
     text: 'drilldown to ZIPCODE'
-  },
-  legend: small ? {} : {
-    layout: 'vertical',
-    align: 'right',
-    verticalAlign: 'middle'
   },
   colorAxis: {
     min: 0,
@@ -139,34 +118,22 @@ Highcharts.mapChart('chart_es3', {
       enabled: true,
       format: '{point.properties.NAME}'
     }
-  // }, {
-  //   type: 'mapline',
-  //   data: separators,
-  //   color: 'silver',
-  //   enableMouseTracking: false,
-  //   animation: {
-  //     duration: 500
-    // }
+  }, {
+    type: 'mapline',
+    data: separators,
+    color: 'silver',
+    enableMouseTracking: false,
+    animation: {
+      duration: 500
+    }
   }],
 
   drilldown: {
+    series: [],
     activeDataLabelStyle: {
       color: '#FFFFFF',
       textDecoration: 'none',
       textOutline: '1px #000000'
-    },
-    breadcrumbs: {
-        buttonTheme: {
-            fill: '#f7f7f7',
-            padding: 8,
-            stroke: '#cccccc',
-            'stroke-width': 1
-        },
-        floating: true,
-        position: {
-            align: 'right'
-        },
-        showFullPath: false
     },
     drillUpButton: {
       relativeTo: 'spacingBox',

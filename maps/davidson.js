@@ -1,15 +1,6 @@
 // Prepare demo data. The data is joined to map using value of 'zipcode'
 // property by default. See API docs for 'joinBy' for more info on linking
 // data and map.
-// const data = [
-//     {code: '37203', value: 10},{code: '77777', value: 63},{code: '37087', value: 2},{code: '37204', value: 3},{code: '75033', value: 7},
-//     {code: '37027', value: 2},{code: '22222', value: 1},{code: '37208', value: 50},{code: '37210', value: 2},{code: '37218', value: 18},
-//     {code: '37206', value: 4},{code: '37212', value: 12},{code: '37215', value: 9},{code: '37115', value: 2},{code: '37209', value: 12},
-//     {code: '37064', value: 3},{code: '37207', value: 18},{code: '37216', value: 12},{code: '37228', value: 1},{code: '37219', value: 2},
-//     {code: '37388', value: 1},{code: '37864', value: 1},{code: '37334', value: 1},{code: '37129', value: 1},{code: '38116', value: 2},
-//     {code: '38206', value: 1},{code: '37086', value: 1},{code: '37214', value: 2},{code: '37402', value: 1},{code: '37213', value: 1},
-//     {code: '37122', value: 1},{code: '37069', value: 1},{code: '37912', value: 1},{code: '37076', value: 2},{code: '37013', value: 2}
-// ]
 const data_json = await fetch("files/data1.json") ;
 const data = await data_json.json();
 
