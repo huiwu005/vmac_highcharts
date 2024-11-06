@@ -1,10 +1,6 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/map-styles.css">
 
 <div class="container">
@@ -20,18 +16,31 @@ crossorigin="anonymous">
           <a href="census.html"><button>Previous: Census</button></a>
         </div>
         <div class="position-absolute top-center">
-          <h4>Split shapefile in QGID</h4>
+          <h4>Split shapefile in QGID 1</h4>
         </div>
   
         <div class="position-absolute top-right">
-          <a href="#"><button>Next: </button></a>
-  
+          <a href="gqid-2.html"><button>Next Step: QGID 2</button></a>
+
         </div>
       </div>
     </div>
 
     <div class="container">
-      <p>Counties and Zip Code shapefiles includes all states. </p>
+      <a href="tn.html"><img src="assets/gqid/tennessee-state-map-by-c.png"></a>
+      <p>Required maps:</p>
+      <ol>
+        <li>TN map with Counties.</li>
+        <b>Unique ID field:</b> <code>STATEFP</code><br>
+        We got: <code>STATEFP_47.geojson</code>
+
+        <li>County map with Zip Codes.</li>
+        <b>Unique ID field:</b> <code>GEOID</code> <i>and</i> use <code>"STATEFP" = "47"</code> in <b>Feature filter:</b> for Tennessee<br>
+        We got: <code>GEOID_47001.geojson, GEOID_47003.geojson, GEOID_47005.geojson, ..., GEOID_47189.geojson</code>
+
+      </ol>
+
+      <p>Shapefiles downloads from Census of "Counties" and "Zip Code" include all states. </p>
       <div class="row details-img banner">
         <div class="col-sm-6 inline-block ">
           <img src="assets/gqid/fig1_us_county.png" width="120%">
@@ -43,10 +52,6 @@ crossorigin="anonymous">
         <div class="col-sm-2 inline-block" id="filelist">
           <img src="assets/gqid/fig3_us_county_split2.png" width="160%">
         </div>
-        <pre>
-          Output files:
-          GEOID_47001.geojson, GEOID_47003.geojson, GEOID_47005.geojson, ..., GEOID_47189.geojson
-        </pre>
       </div>
     </div>
   </div>
