@@ -1,10 +1,7 @@
-.hero{
-  /* background-color: #7c109a;
-	color: #FFF; */
+.hero-header{
   padding: 20px;
 	text-align: center;
   vertical-align: middle;
-	/* margin: 20px; */
 	position: relative;
   height: 100px;
 }
@@ -31,9 +28,20 @@ div.details-img {
 .inline-block {
   display: inline-block;
 }
+#center {
+  text-align: center;
+}
+#top {
+  padding-top: 20px;
+  vertical-align: top;
+}
+#bottom {
+  vertical-align: bottom;
+}
 .banner {
   display: block;
 }
+
 #filelist{
   padding-left: 20px;
 }

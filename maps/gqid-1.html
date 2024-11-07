@@ -8,7 +8,7 @@
   <a href="../maps/"><h1>Highcharts Maps + QGID</h1></a>
 
   <div class="container border">
-    <div class="hero">
+    <div class="hero-header">
 
       <div class="position-relative">
         <div class="position-absolute top-left">
@@ -27,32 +27,82 @@
     </div>
 
     <div class="container">
-      <a href="tn.html"><img src="assets/gqid/tennessee-state-map-by-c.png"></a>
-      <p>Required maps:</p>
+      <a href="tn.html"><img src="assets/gqid/tn_drilldown/tennessee-state-map-by-c.png"></a>
+      <br>
+      <h3>Required maps:</h3>
+      <p>Shapefiles downloads from Census of "Counties" and "Zip Code" include all states. </p>
       <ol>
-        <li>TN map with Counties.</li>
-        <b>Unique ID field:</b> <code>STATEFP</code><br>
-        We got: <code>STATEFP_47.geojson</code>
+        <!-- file 1 -->
+        <li>TN map with Counties: <pre>STATEFP_47.geojson</pre></li>
+        <details><summary>GQID Steps</summary>
+          <p>Split <code>tl_2023_us_county</code> by <b>Unique ID field:</b> <code>STATEFP</code></p>
+          <div class="row details-img banner">
+            <div class="col-sm-7 inline-block ">
+              <img src="assets/gqid/tn_drilldown/us_county_fig1.png" width="120%">
+            </div>
+      
+            <div class="col-sm-3 inline-block">
+              <img src="assets/gqid/tn_drilldown/split_by_statefp.png" height="450px">
+            </div>
+            <p><b>Output:</b> <code>STATEFP_01.geojson, ..., STATEFP_47.geojson, ..., STATEFP_78.geojson</code> ... </p>
+          </div>
+        </details>
 
-        <li>County map with Zip Codes.</li>
-        <b>Unique ID field:</b> <code>GEOID</code> <i>and</i> use <code>"STATEFP" = "47"</code> in <b>Feature filter:</b> for Tennessee<br>
-        We got: <code>GEOID_47001.geojson, GEOID_47003.geojson, GEOID_47005.geojson, ..., GEOID_47189.geojson</code>
+        <!-- file 2 -->
+        <li>County map with Zip Codes:
+          <pre>
+            tl_2023_47_county_join_zcta520_47001.geojson, 
+            tl_2023_47_county_join_zcta520_47003.geojson, 
+            ..., 
+            tl_2023_47_county_join_zcta520_47189.geojson</pre></li>
+        <b>Issue:</b> file <code>tl_2023_us_zcta520</code> does not have <code>GEOID</code> feature, so
+        <details><summary>GQID Steps</summary>
+          <ol>
+            <li>Right click <code>tl_2023_us_county</code> then <b>Filter...</b> by <code>"STATEFP" = '47'</code></li>
+            <li>Right click <code>tl_2023_us_zcta520</code> then <b>Filter...</b> by <code>"ZCTA5CE20" >= '37010' AND "ZCTA5CE20" <= '38589'</code></li>
+            <div class="row details-img banner">
+              <div class="col-sm-3 inline-block" id="center">
+                <img src="assets/gqid/tn_drilldown/right_click_filter.png" width="90%">
+              </div>
+              <div class="col-sm-4 inline-block" id="top">
+                <img src="assets/gqid/tn_drilldown/filter_statefp47.png" width="120%">
+              </div>
+              <div class="col-sm-4 inline-block" id="top">
+                <img src="assets/gqid/tn_drilldown/filter_ZCTA5CE20.png" width="120%">
+              </div>
+            </div>
+
+            <li>Join filtered <code>tl_2023_us_zcta520</code> to <code>tl_2023_us_county</code></li>
+            <div class="row details-img banner">
+              <div class="col-sm-6 inline-block ">
+                <img src="assets/gqid/tn_drilldown/join_county_zcta520_layers.png" width="100%">
+                <img src="assets/gqid/tn_drilldown/join_attributes.png" width="100%">
+              </div>
+              <div class="col-sm-5 inline-block" id="top">
+                <img src="assets/gqid/tn_drilldown/join_county_zcta520_fig2.png" height="450px">
+              </div>
+            </div>
+        
+            <li>Split <code>Joined layer</code> by <code>GEOID</code> in <b>Unique ID field:</b></li>
+            <div class="details-img">
+              <div class="col-sm-6 inline-block">
+                <img src="assets/gqid/tn_drilldown/split_joined_layer.png" width="100%">
+                <img src="assets/gqid/tn_drilldown/split_vector_layer.png">
+              </div>
+              <div class="col-sm-5 inline-block" id="top">
+                <img src="assets/gqid/tn_drilldown/join_county_zcta520_fig4_split.png" height="450px">
+              </div>
+              <p><b>Output:</b> <code>GEOID_47001.geojson, GEOID_47003.geojson, GEOID_47005.geojson, ..., GEOID_47189.geojson</code><br>
+              Rename output files: <code>rename 's/GEOID/tl_2023_47_county_join_zcta520/g' *</code><br>
+              <b>Output:</b> <code>tl_2023_47_county_join_zcta520_47001.geojson, tl_2023_47_county_join_zcta520_47003.geojson, ..., tl_2023_47_county_join_zcta520_47189.geojson</code></p>
+              </p>
+            </div>
+  
+          </ol>
+        </details>
 
       </ol>
 
-      <p>Shapefiles downloads from Census of "Counties" and "Zip Code" include all states. </p>
-      <div class="row details-img banner">
-        <div class="col-sm-6 inline-block ">
-          <img src="assets/gqid/fig1_us_county.png" width="120%">
-        </div>
-  
-        <div class="col-sm-3 inline-block">
-          <img src="assets/gqid/fig2_us_county_split1.png" height="450px">
-        </div>
-        <div class="col-sm-2 inline-block" id="filelist">
-          <img src="assets/gqid/fig3_us_county_split2.png" width="160%">
-        </div>
-      </div>
     </div>
   </div>
 </div>
