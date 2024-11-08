@@ -32,7 +32,7 @@ roadsiu.forEach(item => {
 
 lms_waters.forEach(item => {
     var layer = item.properties.layer;
-    // land markers
+    // landmarks
     if (layer.includes('arealm')){
         var name = item.properties.FULLNAME;
         if (name.includes("International")){
@@ -147,8 +147,8 @@ Highcharts.mapChart('chart_davidson', {
             enableMouseTracking: false,
             showInLegend: true
         },{
-            // area waters and land markers
-            name: 'Area Waters & Land Markers',
+            // area waters and landmarkers
+            name: 'Area Waters & Landmarkers',
             type: 'map',
             data: lms_waters,
             allAreas: false,

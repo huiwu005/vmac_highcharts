@@ -25,6 +25,13 @@ div.details-img {
   margin: 20px;
   height: fit-content;
 }
+div.layer-img {
+  padding: 5px;
+  border: antiquewhite solid 1px;
+  border-radius: 5%;
+  background-color: antiquewhite;
+  height: fit-content;
+}
 .inline-block {
   display: inline-block;
 }
@@ -104,3 +111,22 @@ div.details-img {
   right: 0;
 }
 code {color:black;}
+.uscb-text-image-text table thead tr th {
+  background: #F1F3F5 !important;
+  font-size: 0.8125rem;
+  color: #000000;
+  border: none !important;
+  line-height: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  word-break: normal;
+}
+.uscb-text-image-text table tbody tr  {
+  font-size: smaller;
+}
+.mytable tbody tr:nth-child(1),
+.mytable tbody tr:nth-child(2),
+.mytable tbody tr:nth-child(3)
+{background-color: orange;}

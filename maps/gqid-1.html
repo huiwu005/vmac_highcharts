@@ -33,7 +33,7 @@
       <p>Shapefiles downloads from Census of "Counties" and "Zip Code" include all states. </p>
       <ol>
         <!-- file 1 -->
-        <li>TN map with Counties: <pre>STATEFP_47.geojson</pre></li>
+        <li>TN map with Counties: <code>STATEFP_47.geojson</code></li>
         <details><summary>GQID Steps</summary>
           <p>Split <code>tl_2023_us_county</code> by <b>Unique ID field:</b> <code>STATEFP</code></p>
           <div class="row details-img banner">
@@ -92,10 +92,7 @@
               <div class="col-sm-5 inline-block" id="top">
                 <img src="assets/gqid/tn_drilldown/join_county_zcta520_fig4_split.png" height="450px">
               </div>
-              <p><b>Output:</b> <code>GEOID_47001.geojson, GEOID_47003.geojson, GEOID_47005.geojson, ..., GEOID_47189.geojson</code><br>
-              Rename output files: <code>rename 's/GEOID/tl_2023_47_county_join_zcta520/g' *</code><br>
-              <b>Output:</b> <code>tl_2023_47_county_join_zcta520_47001.geojson, tl_2023_47_county_join_zcta520_47003.geojson, ..., tl_2023_47_county_join_zcta520_47189.geojson</code></p>
-              </p>
+              <p><b>Output:</b> <code>tl_2023_47_county_join_zcta520_47001.geojson, tl_2023_47_county_join_zcta520_47003.geojson, ..., tl_2023_47_county_join_zcta520_47189.geojson</code></p>
             </div>
   
           </ol>
