@@ -44,7 +44,7 @@ Highcharts.mapChart('chart_es3', {
           var zipcode_boundaries = data.filter(function(item) {
               var fips = item.properties.county_fips;
               var layer = item.properties.layer;
-              return layer.includes("county_fips") && fips == e.point.drilldown
+              return layer.includes("county_fips") //&& fips == e.point.drilldown // exclude touched area
           });
           
           var ddSeries = {
@@ -59,8 +59,9 @@ Highcharts.mapChart('chart_es3', {
                   width: '80px', // force line-wrap
                   textTransform: 'uppercase',
                   fontWeight: 'normal',
+                  fontSize: '.5em',
                   textOutline: 'none',
-                  color: '#888'
+                  color: 'white'
               },
               format: '{point.name}<br/>{point.zipcode}'
             },
