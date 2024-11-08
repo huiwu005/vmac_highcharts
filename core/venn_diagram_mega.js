@@ -2,17 +2,6 @@
 const data = await (await fetch('files/venn/venn_mega.json')).json();
 const formatter = new Intl.NumberFormat('en-US');
 
-// const elig_grid = elig.split("\n").filter((item) => item != "GRID")
-
-// const mega = await (await fetch('files/MEGAFinal.fam')).text();
-// const mega_grid_all = []
-// mega.split("\n").forEach((line,index) => {
-//   mega_grid_all.push(line.split(" ")[1]);
-// })
-// const mega_grid = [...new Set(mega_grid_all)]
-
-// const mega_elig = elig_grid.filter(value => mega_grid.includes(value));
-
 function formatNumberWithCommas(number) {
   return number.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ",");
 }

@@ -5,9 +5,7 @@ const sunburstData = await sunburstData_data_json.json();
   const colors = ['#895273', '#2F5F98', '#6BBBC4', '#5E3967', '#31356E']; //'#2D8BBA', '#41B8D5'
   Highcharts.chart('u24_dashboard_sunburst', {
     chart: {
-        height: '110%',
-        marginTop: 40,
-        marginBottom: 25
+        height: '50%'
     },
     colors: colors,
     title: {

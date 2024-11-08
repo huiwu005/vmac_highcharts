@@ -1,85 +1,18 @@
 html,body{
 	padding: 0;
 	margin: 0;
-	background-color: rgb(206,209,219);
+	padding-bottom: 100px;
 }
 body{
 	font-family: sans-serif;
 }
-.hero{
-	background-color: #7c109a;
-	color: #FFF;
-	padding: 50px 30px;
-	text-align: center;
-	margin-bottom: 15px;
-	position: relative;
+#center {
+  text-align: center;
 }
-.hero-narrow{
-	background-color: #ac63e5;
-	color: black;
-	padding: 2px 30px;
-	text-align: center;
-	margin-bottom: 15px;
-	position: relative;
+#top {
+  padding-top: 20px;
+  vertical-align: top;
 }
-.hero:before{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	left: 0;
-	height: 10px;
-	background: linear-gradient(to left, rgb(212,0,255), #7c109a);
-}
-.hero:after{
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	left: 0;
-	height: 10px;
-	background: linear-gradient(to right, rgb(212,0,255), #7c109a);
-}
-.hero h1{
-	font-weight: normal;
-	font-size: 3rem;
-	margin: 0;
-	font-family: serif;
-}
-.hero h2{
-	font-weight: normal;
-	font-size: 1.7rem;
-	margin: 0;
-}
-.filter-nav {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 10px;
-}
-.filter-nav a{
-	text-decoration: none;
-	padding: 9px;
-	color: #7c109a;
-	border: 1px solid #bb8dd3;
-	border-radius: 4px;
-	margin: 4px;
-	width: 15%;
-	text-align: center;
-}
-.filter-nav a:hover {
-	background-color: #dbbce9;
-}
-.filter-nav .active{
-	background-color: #702acb;
-	color: #FFF;
-}
-.filter-nav .active:hover {
-	background-color: #702acb;
-	cursor:  default;
-}
-
-a img {
-	margin: auto;
+#bottom {
+  vertical-align: bottom;
 }

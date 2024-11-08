@@ -2,62 +2,68 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/map-styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
 
 <div class="container">
   <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
 
   <ol>
 
-    <h2><li>Demos: Map Level to County</li></h2>
+    <h2><li>Demos: Maps Level to County (Samples in Highcharts)</li></h2>
     <p><sup>*</sup> Highmaps - Map Collection download link: <a href="https://code.highcharts.com/mapdata/" target="_blank">https://code.highcharts.com/mapdata/</a></p>
     <ul>
       <li><a href="world.html"><h2>World Map Drilldown</h2></a></li>
       <li><a href="us.html"><h2>US Map Drilldown</h2></a></li>
     </ul>
     
-    <div class="row">
-      <div class="col-sm-8">
-        <p>For map data, Highchats provides geometry data levels from World to US State County level (hc-key/fips/name). There is no Zip Code level data can be found on Highcharts Maps resources.</p>
-        <details name="properties" open><summary>Federal Information Processing Series (FIPS)</summary>
-          <div class="details">
-            <h3>FIPS Codes</h3>
-            <p>A FIPS code or Federal Information Processing Standard code, a unique numeric code that identifies geographic areas in the United States:</p>
-            <ul>
-              <li><b>States</b>: Two-digit codes</li>
-              <li><b>Counties</b>: Five-digit codes, with the first two digits indicating the state</li>
-              <li><b>Other areas</b>: alphabetically assigned codes for places, county subdivisions, consolidated cities, and American Indian, Alaska Native, and Native Hawaiian area.</li>
-            </ul>
+    <details><summary>Features in Map</summary>
+      <div class="row">
+        <div class="col-sm-8">
+          <p>For map data, Highchats provides geometry data levels from World to US State County level (hc-key/fips/name). There is no Zip Code level data can be found on Highcharts Maps resources.</p>
+          <details name="properties" open><summary>Federal Information Processing Series (FIPS)</summary>
+            <div class="details">
+              <h3>FIPS Codes</h3>
+              <p>A FIPS code or Federal Information Processing Standard code, a unique numeric code that identifies geographic areas in the United States:</p>
+              <ul>
+                <li><b>States</b>: Two-digit codes</li>
+                <li><b>Counties</b>: Five-digit codes, with the first two digits indicating the state</li>
+                <li><b>Other areas</b>: alphabetically assigned codes for places, county subdivisions, consolidated cities, and American Indian, Alaska Native, and Native Hawaiian area.</li>
+              </ul>
+            </div>
+          </details>
+          <details name="properties"><summary>hc-key</summary>
+            <div class="details">
+              <p>Unique hierarchical identifier for the area. Consistent across maps, and reflected in the naming convention of the maps. </p>
+              <p><i>e.g.</i> us, us-ma-027, gb-hi</p>
+            </div>
+          </details>
+          <details name="properties"><summary>hc-a2</summary>
+            <div class="details">
+              <p>Two letter abbreviation of area name. Usually same as postal code/ISO code, but not always. Not guaranteed to be unique within map.</p>
+              <p><i>e.g.</i> KV, PA, BB</p>
+            </div>
+          </details>
+    
+          <details name="properties"><summary>Example: Tennessee GeoJSON</summary>
+            <div class="details2">
+              <embed src="https://code.highcharts.com/mapdata/countries/us/us-tn-all.geo.json" style="width:100%; height: 40vh;">
+            </div>
+          </details>
+        </div>
+    
+        <div class="col-sm-4">
+          <div class="details-img">
+            <img src="assets/census/geojson_sample.png">
           </div>
-        </details>
-        <details name="properties"><summary>hc-key</summary>
-          <div class="details">
-            <p>Unique hierarchical identifier for the area. Consistent across maps, and reflected in the naming convention of the maps. </p>
-            <p><i>e.g.</i> us, us-ma-027, gb-hi</p>
-          </div>
-        </details>
-        <details name="properties"><summary>hc-a2</summary>
-          <div class="details">
-            <p>Two letter abbreviation of area name. Usually same as postal code/ISO code, but not always. Not guaranteed to be unique within map.</p>
-            <p><i>e.g.</i> KV, PA, BB</p>
-          </div>
-        </details>
-  
-        <details name="properties"><summary>Example: Tennessee GeoJSON</summary>
-          <div class="details2">
-            <embed src="https://code.highcharts.com/mapdata/countries/us/us-tn-all.geo.json" style="width:100%; height: 40vh;">
-          </div>
-        </details>
-      </div>
-  
-      <div class="col-sm-4">
-        <div class="details-img">
-          <img src="assets/census/geojson_sample.png">
         </div>
       </div>
-    </div>
+    </details>
     
     <br>
-    <h2><li>Demos: Maps use Zip Code</li></h2>
+    <h2><li id="vmac_samples">
+      <img src="../assets/images/highcharts.png" height="30px">
+      <img src="../assets/images/QGIS-1.jpeg" height="30px" style="vertical-align:middle">
+      Demos: Maps use Zip Code (Samples in VMAC)</li></h2>
     <ul>
       <li><a href="tn.html"><h2>TN County Drilldown to Zip Code</h2></a></li>
       <li><a href="TN-Davidson.html"><h2>TN Davidson County Event Attendence by Zip Code</h2></a></li>
@@ -103,15 +109,15 @@
     <ul>
       <li><a href="census.html"><b>Step 1</b></a>: Download Tennessee County Zip Code geometry data from <img src="../assets/images/USCENSUS.svg" height="20">
         <br><b>TIGER/Line Shapefiles® </b><a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" target="_blank">https://www.census.gov/cgi-bin/geo/shapefiles/index.php</a></li>
-      <li><a href="gqid-1.html"><b>Step 2</b></a>: <span style='display:inline;'>Split and create files by County using QGID
-        <img src="../assets/images/QGID-1.jpeg" height="20" style="vertical-align:middle">
+      <li><a href="gqid-1.html"><b>Step 2</b></a>: <span style='display:inline;'>Split and create files by County using QGIS
+        <img src="../assets/images/QGIS-1.jpeg" height="20" style="vertical-align:middle">
       </span></li>
       <li>Add header to GeoJSON then convert to Javascript.</li>
     </ul>
   
     
     <br>
-    <h2><li>Other Map Demos</li></h2>
+    <h2><li>Other Demos in Highcharts</li></h2>
     <details><summary>Open ...</summary>
       <center>
         <embed src="https://www.highcharts.com/demo#highcharts-maps-demo-general" style="width:1200px; height: 60vh;">

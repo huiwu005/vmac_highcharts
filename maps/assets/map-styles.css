@@ -35,16 +35,7 @@ div.layer-img {
 .inline-block {
   display: inline-block;
 }
-#center {
-  text-align: center;
-}
-#top {
-  padding-top: 20px;
-  vertical-align: top;
-}
-#bottom {
-  vertical-align: bottom;
-}
+
 .banner {
   display: block;
 }
