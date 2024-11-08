@@ -1,0 +1,123 @@
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/map-styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  
+  <!-- highlight.js used in pre code language -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<div class="container">
+  <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
+  <a href="../maps/"><h1>Highcharts Maps + QGIS</h1></a>
+
+  <div class="container border">
+    <div class="hero-header">
+
+      <div class="position-relative">
+        <div class="position-absolute top-left">
+          <a href="../maps/#vmac_samples"><button>Map Main</button></a>
+          <a href="census.html"><button>Download</button></a>
+          <a href="qgis-1.html"><button>QGIS 1</button></a>
+          <a href="qgis-2.html"><button>2</button></a>
+        </div>
+        <div class="position-absolute top-center">
+          <h4>How to Use in Code</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul>
+        <h3><li>Use <code>.geojson</code> in code</li></h3>
+        <p><i>e.g.</i> Layer 1 in code</p>
+        <div class="row">
+          <div class="col-sm-9">
+            <div class="row">
+              <pre class="smallerer"><code>
+  // davidson.js
+  // read .geojson
+  var county_boundary_json = await fetch(
+      'javascripts/GEOID_47037.geojson'
+  ).then(response => response.json());
+  var county_boundary = county_boundary_json.features
+
+  // load data in Highcharts
+  Highcharts.mapChart('chart_davidson', {
+      ...,
+      series: [{...},
+      {
+          name: 'County Boundary',
+          type: 'mapline',
+          data: county_boundary,
+          dashStyle: 'LongDash',
+          color: 'grey',
+          lineWidth: 3
+      }]
+  });
+              </code></pre>
+    
+            </div>
+          </div>
+          <div class="col-sm-3 layer-img">
+            <img src="assets/qgis/davidson/county_boundary.png" width="100%">
+          </div>
+                    
+        </div>
+       
+
+        <h3><li>Use <code>.js</code> in code</li></h3>
+        <ol>
+          <h3><li>Rename <code>.geojson</code> to <code>.js</code></li></h3>
+          <pre><code class="language-bash">mv GEOID_47037.geojson GEOID_47037.geojson.js</code></pre>
+          <h3><li>Add Title in <code>.js</code></li></h3>
+          <div class="row">
+            <div class="col-sm-6">
+              <h4>Before</h4>
+              <pre class="smallerer"><code>
+{
+    "type": "FeatureCollection",
+    "name": "GEOID_47037",
+    "crs": {...},
+    "features": [...]
+}
+              </code></pre>
+            </div>
+            <div class="col-sm-6">
+              <h4>After</h4>
+              <pre class="smallerer"><code class="language-javascript">
+// add unique map title 'Highcharts.maps["map_title"]'
+Highcharts.maps["GEOID_47037"] = 
+{
+    "type": "FeatureCollection",
+    "name": <span style="color:red;">"GEOID_47037"</span>,
+    "crs": {...},
+    "features": [...]
+}
+              </code></pre>
+            </div>
+          </div>
+          <h3><li>In <code>.html</code></li></h3>
+          Add below line in <code>&lt;head&gt;</code><br>
+          <pre><code class="language-html">
+// maps/TN-Davidson.html
+&lt;script src=&quot;javascripts/GEOID_47037.geojson.js&quot;&gt;&lt;/script&gt;
+          </code></pre>
+          
+          <h3><li>In <code>davidson.js</code></li></h3>
+          <pre><code class="language-javascript">
+// davidson.js
+var county_boundary_json = Highcharts.maps["GEOID_47037"];
+          </code></pre>
+
+        </ol>
+      </ul>
+    </div>
+  </div>
+</div>
+
