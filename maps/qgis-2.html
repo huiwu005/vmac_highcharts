@@ -1,0 +1,169 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="assets/map-styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<div class="container">
+  <a href="/"><img src="../assets/images/highcharts_logo.png"></a>
+  <a href="../maps/"><h1>Highcharts Maps + QGIS</h1></a>
+
+  <div class="container border">
+    <div class="hero-header">
+
+      <div class="position-relative">
+        <div class="position-absolute top-left">
+          <a href="../maps/#vmac_samples"><button>Map Main</button></a>
+          <a href="census.html"><button>Download</button></a>
+          <a href="qgis-1.html"><button>QGIS 1</button></a>
+        </div>
+        <div class="position-absolute top-center">
+          <h4>Multiple layers in QGIS</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="center">
+        <a href="TN-Davidson.html"><img src="assets/qgis/davidson/davidson-county-event-by.png" width="50%"></a>
+      </div>
+
+      <br>
+      <h3>Required maps:</h3>
+      <ol>
+        <!-- file 1 -->
+        <li>County boundary: <code>GEOID_47037.geojson</code></li>
+        <div class="row">
+          <div class="col-sm-3 layer-img">
+            <img src="assets/qgis/davidson/county_boundary.png" width="100%">
+          </div>
+          
+          <div class="col-sm-9">
+            <div class="row">
+              <h4>How to use geojson file in Highcharts</h4>
+              <div class="col-sm-6">
+                <pre style="font-size: .75em;">
+  # read
+  var county_boundary = await fetch(
+      'javascripts/GEOID_47037.geojson'
+  ).then(response => response.json());
+
+  county_boundary = county_boundary.features
+                </pre>
+              </div>
+              <div class="col-sm-6">
+                <pre style="font-size: .75em;">
+Highcharts.mapChart('chart_davidson', {
+    ...,
+    series: [{...},
+    {
+        name: 'County Boundary',
+        type: 'mapline',
+        data: county_boundary,
+        dashStyle: 'LongDash',
+        color: 'grey',
+        lineWidth: 3
+    }]
+});
+                </pre>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- file 2 -->
+        <li>One Davidson County map with Zip Codes: <code>tl_2023_47_county_join_zcta520_47037.geojson</code></li>
+          <div class="row">
+            <div class="col-sm-3 layer-img">
+              <img src="assets/qgis/davidson/zipcodes.png" width="100%">
+            </div>
+          </div>
+        
+        <!-- file 3 -->
+        <li>A map of roads, includes Interstate and US Highway. <code>tl_2023_47037_roads_IUS.geojson</code></li>
+        <div class="row">
+          <div class="col-sm-3 inline-block layer-img">
+            <img src="assets/qgis/davidson/roads.png" width="100%">
+          </div>
+          <div class="col-sm-9">
+            <details><summary>QGIS Steps</summary>
+              <div class="row details-img banner">
+                <p>Filter <code>"RTTYP" IN ('I','U','S')</code></p>
+                <div class="col-sm-3 inline-block">
+                  <div class="uscb-text-image-text">
+                    <table class="table table-sm mytable">
+                      <thead>
+                        <tr><th>Route Type Code</th><th>Route Type Code Description</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>I</td><td>Interstate</td></tr>
+                        <tr><td>U</td><td>U.S.</td></tr>
+                        <tr><td>S</td><td>State recognized</td></tr>
+                        <tr><td>C</td><td>County</td></tr>
+                        <tr><td>M</td><td>Common Name</td></tr>
+                        <tr><td>O</td><td>Other</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 inline-block" id="top">
+                  <img src="assets/qgis/davidson/roads_47037.png" width="100%">
+                </div>
+                <div class="col-sm-4 inline-block" id="top">
+                  <img src="assets/qgis/davidson/roads_47037_IUS.png" width="100%">
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- file 4 -->
+        <li>Area water & Landmark, e.g. lakes, University, and Airport</li>
+        <div class="row">
+          <div class="col-sm-3 inline-block layer-img">
+            <img src="assets/qgis/davidson/landmarks.png" width="100%">
+          </div>
+          
+          <div class="col-sm-9">
+            <details><summary>QGIS Steps</summary>
+              <div class="details-img">
+                <p>Join <code>tl_2023_47_arealm</code> and <code>GEOID_47037</code></p>
+                <div class="row banner">
+                  <div class="col-sm-5 inline-block">
+                    <img src="assets/qgis/davidson/arealm.png" height="170px">
+                  </div>
+                  <div class="col-sm-2 inline-block" id="center">
+                    <img src="assets/right-arrow.png" width="50%">
+                  </div>
+                  <div class="col-sm-3 inline-block">
+                    <img src="assets/qgis/davidson/arealm_47037.png" height="170px">
+                  </div>
+                </div>
+                <p>Then join to <code>tl_2023_47037_areawater</code></p>
+                <div class="row banner">
+                  <div class="col-sm-2 inline-block" id="center">
+                    <img src="assets/right-arrow.png" width="50%">
+                  </div>
+                  <div class="col-sm-3 inline-block" id="center">
+                    <img src="assets/qgis/davidson/areawater.png" height="170px">
+                  </div>
+                  <div class="col-sm-2 inline-block" id="center">
+                    <img src="assets/right-arrow.png" width="50%">
+                  </div>
+                  <div class="col-sm-3 inline-block">
+                    <img src="assets/qgis/davidson/areawater_landmark.png" height="170px">
+                  </div>
+                </div>
+
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </ol>
+      
+    </div>
+  </div>
+</div>

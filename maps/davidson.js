@@ -15,10 +15,10 @@ var zipcode_boundaries = zips.filter(function(item) {
     var layer = item.properties.layer;
     return layer.includes("county_fips")
 });
-var county_boundary = zips.filter(function(item) {
-    var layer = item.properties.layer;
-    return layer.includes('GEOID')
-});
+// use geojson file
+var county_boundary = await fetch('javascripts/GEOID_47037.geojson').then(response => response.json());
+county_boundary = county_boundary.features
+
 var lms_waters = zips.filter(function(item) {
     var layer = item.properties.layer;
     return layer.includes("area")
@@ -135,7 +135,6 @@ Highcharts.mapChart('chart_davidson', {
                 pointFormat: '{point.properties.name} ({point.properties.zipcode}): <b>{point.value}</b>'
             }
         },{
-
             // Interstates and US HWYs
             name: 'Interstate & US HWY',
             type: 'mapline',
@@ -174,7 +173,6 @@ Highcharts.mapChart('chart_davidson', {
             lineWidth: 3,
             affectsMapView: false,
             dataLabels: {enabled: false},
-            // enableMouseTracking: false,
             showInLegend: true,
             tooltip: {
                 pointFormat: '{point.properties.county_name}'
