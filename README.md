@@ -1,19 +1,29 @@
-# github
+# Highcharts use in VMAC-DCC
+## github url
 https://github.com/huiwu005/vmac_highcharts
 
-# Highcharts
-## Demos
+## Highcharts
+### Demos
 https://www.highcharts.com/demo
 
-## Highcharts Map code: 
+### Highcharts Map code: 
 https://code.highcharts.com/mapdata/
 
-# Download Shapefiles on Census
+## Download Shapefiles on Census
 https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
 
-# QGIS
+- file saved at
+assets/maps/census
+
+## QGIS
 https://www.qgis.org/
 
-## run
+- project
+assets/maps/census/Nov2024.qgz
+
+- splitted or joined files saved at
+assets/maps/qgis
+
+### run
 `php -S localhost:3000`
 
