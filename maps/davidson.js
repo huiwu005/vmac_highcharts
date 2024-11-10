@@ -5,24 +5,18 @@ const data_json = await fetch("files/data1.json") ;
 const data = await data_json.json();
 
 // Create the chart
-const geoIU = Highcharts.maps["countries/us/TN/tl_rd22_47_RTTYP_IUS/tl_rd22_47037_roads_RTTYP_IUS"],
-    zipjson = Highcharts.maps["countries/us/TN/tl_2023_47/tl_2023_47037"],
-    countyjson = Highcharts.maps["countries/us/TN/tl_2023_47_county"];
-const roadsiu = Highcharts.geojson(geoIU, 'mapline'),
-    zips = Highcharts.geojson(zipjson, 'map'),
-    counties = Highcharts.geojson(countyjson, 'map');
-var zipcode_boundaries = zips.filter(function(item) {
-    var layer = item.properties.layer;
-    return layer.includes("county_fips")
-});
 // use geojson file
-var county_boundary = await fetch('javascripts/GEOID_47037.geojson').then(response => response.json());
+var county_boundary = await fetch('../assets/maps/qgis/tl_2023_47_county/GEOID_47037.geojson').then(response => response.json());
 county_boundary = county_boundary.features
 
-var lms_waters = zips.filter(function(item) {
-    var layer = item.properties.layer;
-    return layer.includes("area")
-});
+var zipcode_boundaries = await fetch('../assets/maps/qgis/tl_2023_47_county_join_zcta520/tl_2023_47_county_join_zcta520_47037.geojson').then(response => response.json());
+zipcode_boundaries = Highcharts.geojson(zipcode_boundaries, 'map');
+
+var lms_waters = await fetch('../assets/maps/qgis/tl_2023_47037_arealm_areawater.geojson').then(response => response.json());
+lms_waters = lms_waters.features
+
+var roadsiu = await fetch('../assets/maps/qgis/tl_2023_47037_roads_IUS.geojson').then(response => response.json());
+roadsiu = roadsiu.features
 
 // Skip or move some labels to avoid collision
 roadsiu.forEach(item => {
@@ -30,47 +24,56 @@ roadsiu.forEach(item => {
     if (type != "I") item.color = "#ffc414" 
 })
 
+// assign different colors for areawater and area landmarks
 lms_waters.forEach(item => {
     var layer = item.properties.layer;
     // landmarks
-    if (layer.includes('arealm')){
+    if (layer == "47037_arealm"){
         var name = item.properties.FULLNAME;
-        if (name.includes("International")){
-            item.color = Highcharts.color("#c4d9ef").setOpacity(0.75).get()
-            item.dataLabels = {
-                enabled: true,
-                style: {color: '#4889cd'},
-                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-plane" style="font-size: 1.5em"></i>',
-                useHTML: true
-            }
-        }
-        if (name.includes("Park")){
-            item.color = Highcharts.color("#53ca60").setOpacity(0.75).get()
-            item.dataLabels = {
-                enabled: true,
-                style: {color: '#2a8834'},
-                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-tree" style="font-size: 1.5em"></i>',
-                useHTML: true
-            }
-        }
-        if (name.includes("Univ")){
-            item.color = Highcharts.color("#b89065").setOpacity(0.75).get()
-            item.dataLabels = {
-                enabled: true,
-                style: {color: "#7a5a38"},
-                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-graduation-cap" style="font-size: 1.5em"></i>',
-                useHTML: true
+        if (name == null) {
+            item.color = Highcharts.color("#8bc492").setOpacity(0.75).get()
+            item.dataLabels = {enabled: false }
+        } else {
+            if (name.includes("International")){
+                // International airport
+                item.color = Highcharts.color("#c4d9ef").setOpacity(0.75).get()
+                item.dataLabels = {
+                    enabled: true,
+                    style: {color: '#4889cd',width: '80px'},
+                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-plane" style="font-size: 1.5em"></i>',
+                    y: -25,
+                    useHTML: true
+                }
+            } else if (name.includes("Univ")){
+                // University
+                item.color = Highcharts.color("#b89065").setOpacity(0.75).get()
+                item.dataLabels = {
+                    enabled: true,
+                    style: {color: "#7a5a38",width: '80px'},
+                    y: -25,
+                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-graduation-cap" style="font-size: 1.5em"></i>',
+                    useHTML: true
+                }
+            } else if (name.includes("Park")){
+                // Park
+                item.color = Highcharts.color("#53ca60").setOpacity(0.75).get()
+                item.dataLabels = {
+                    enabled: true,
+                    style: {color: '#2a8834',width: '80px'},
+                    y: -25,
+                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-tree" style="font-size: 1.5em"></i>',
+                    useHTML: true
+                }
             }
         }
     };
 
     // area waters
     if (layer.includes('areawater')){
-        item.color = Highcharts.color("#6495ed").setOpacity(0.5).get()
+        item.color = Highcharts.color("#3172e8").setOpacity(0.5).get()
         item.dataLabels = {enabled: false}
     }
 });
-
 
 Highcharts.mapChart('chart_davidson', {
     chart: {
@@ -106,8 +109,8 @@ Highcharts.mapChart('chart_davidson', {
             data: data,
             mapData: zipcode_boundaries,
             allAreas: true,
-            joinBy: ["zipcode", 'code'],
-            fillOpacity: 0.1,
+            joinBy: ["ZCTA5CE20", 'code'],
+            fillOpacity: 0.05,
             states: {
                 hover: {
                     color: '#BADA55'
@@ -116,7 +119,7 @@ Highcharts.mapChart('chart_davidson', {
             dataLabels: {
                 enabled: true,
                 formatter: function() {
-                    var name = this.point.name, zipcode = this.point.zipcode;
+                    var name = this.point.name, zipcode = this.point.ZCTA5CE20;
                     if (name === "Nashville") {
                         return zipcode
                     } else {
@@ -152,12 +155,7 @@ Highcharts.mapChart('chart_davidson', {
             data: lms_waters,
             allAreas: false,
             color: '#6495ed',
-            dataLabels: {
-                enabled: true,
-                style: {width: '80px'},
-                y: -25,
-                format: '{point.properties.FULLNAME}'
-            },
+            dataLabels: {enabled: false},
             enableMouseTracking: false,
             tooltip: {enabled: false},
             affectsMapView: false,
