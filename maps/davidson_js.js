@@ -1,26 +1,35 @@
-// maps/davidson.js
+// maps/davidson_js.js
 
 /* Prepare demo data. The data is joined to map using value of 'zipcode'
-property by default. See API docs for 'joinBy' for more info on linking
+ property by default. See API docs for 'joinBy' for more info on linking
 data and map.*/
 
-// load data which is used in "zipcode_boundaries"
+// load data. data used in 1st layer "zipcode_boundaries"
 const data_json = await fetch("files/data1.json") ;
 const data = await data_json.json();
 
 // Create the chart
-// use geojson file
-var county_boundary = await fetch('../assets/maps/qgis/tl_2023_47_county/GEOID_47037.geojson').then(response => response.json());
-county_boundary = county_boundary.features
+// read in javascript maps
+const geoIU = Highcharts.maps["countries/us/TN/tl_rd22_47_RTTYP_IUS/tl_rd22_47037_roads_RTTYP_IUS"],
+    zipjson = Highcharts.maps["countries/us/TN/tl_2023_47/tl_2023_47037"],
+    countyjson = Highcharts.maps["countries/us/TN/tl_2023_47_county"];
+const roadsiu = Highcharts.geojson(geoIU, 'mapline'),
+    zips = Highcharts.geojson(zipjson, 'map'),
+    counties = Highcharts.geojson(countyjson, 'map');
 
-var zipcode_boundaries = await fetch('../assets/maps/qgis/tl_2023_47_county_join_zcta520/tl_2023_47_county_join_zcta520_47037.geojson').then(response => response.json());
-zipcode_boundaries = Highcharts.geojson(zipcode_boundaries, 'map');
-
-var lms_waters = await fetch('../assets/maps/qgis/tl_2023_47037_arealm_areawater.geojson').then(response => response.json());
-lms_waters = lms_waters.features
-
-var roadsiu = await fetch('../assets/maps/qgis/tl_2023_47037_roads_IUS.geojson').then(response => response.json());
-roadsiu = roadsiu.features
+// split zips file into three layers
+var zipcode_boundaries = zips.filter(function(item) {
+    var layer = item.properties.layer;
+    return layer.includes("county_fips")
+});
+var county_boundary = zips.filter(function(item) {
+    var layer = item.properties.layer;
+    return layer.includes('GEOID')
+});
+var lms_waters = zips.filter(function(item) {
+    var layer = item.properties.layer;
+    return layer.includes("area")
+});
 
 // Skip or move some labels to avoid collision
 roadsiu.forEach(item => {
@@ -32,42 +41,35 @@ roadsiu.forEach(item => {
 lms_waters.forEach(item => {
     var layer = item.properties.layer;
     // landmarks
-    if (layer == "47037_arealm"){
+    // if (layer == "47037_arealm"){
+    if (layer.includes('arealm')){
         var name = item.properties.FULLNAME;
-        if (name == null) {
-            item.color = Highcharts.color("#8bc492").setOpacity(0.75).get()
-            item.dataLabels = {enabled: false }
-        } else {
-            if (name.includes("International")){
-                // International airport
-                item.color = Highcharts.color("#c4d9ef").setOpacity(0.75).get()
-                item.dataLabels = {
-                    enabled: true,
-                    style: {color: '#4889cd',width: '80px'},
-                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-plane" style="font-size: 1.5em"></i>',
-                    y: -25,
-                    useHTML: true
-                }
-            } else if (name.includes("Univ")){
-                // University
-                item.color = Highcharts.color("#b89065").setOpacity(0.75).get()
-                item.dataLabels = {
-                    enabled: true,
-                    style: {color: "#7a5a38",width: '80px'},
-                    y: -25,
-                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-graduation-cap" style="font-size: 1.5em"></i>',
-                    useHTML: true
-                }
-            } else if (name.includes("Park")){
-                // Park
-                item.color = Highcharts.color("#53ca60").setOpacity(0.75).get()
-                item.dataLabels = {
-                    enabled: true,
-                    style: {color: '#2a8834',width: '80px'},
-                    y: -25,
-                    format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-tree" style="font-size: 1.5em"></i>',
-                    useHTML: true
-                }
+        if (name.includes("International")){
+            item.color = Highcharts.color("#c4d9ef").setOpacity(0.75).get()
+            item.dataLabels = {
+                enabled: true,
+                style: {color: '#4889cd'},
+                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-plane" style="font-size: 1.5em"></i>',
+                useHTML: true
+            }
+        }
+        if (name.includes("Park")){
+            item.color = Highcharts.color("#53ca60").setOpacity(0.75).get()
+            item.dataLabels = {
+                enabled: true,
+                style: {color: '#2a8834'},
+                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-tree" style="font-size: 1.5em"></i>',
+                useHTML: true
+            }
+        }
+        if (name.includes("Univ")){
+            item.color = Highcharts.color("#b89065").setOpacity(0.75).get()
+            item.dataLabels = {
+                enabled: true,
+                style: {color: "#7a5a38"},
+                format: '{point.properties.FULLNAME}' + '<br/><i class="fa fa-graduation-cap" style="font-size: 1.5em"></i>',
+                useHTML: true
+
             }
         }
     };
@@ -113,7 +115,7 @@ Highcharts.mapChart('chart_davidson', {
             data: data,
             mapData: zipcode_boundaries,
             allAreas: true,
-            joinBy: ["ZCTA5CE20", 'code'],
+            joinBy: ["zipcode", 'code'],
             fillOpacity: 0.05,
             states: {
                 hover: {
@@ -123,7 +125,7 @@ Highcharts.mapChart('chart_davidson', {
             dataLabels: {
                 enabled: true,
                 formatter: function() {
-                    var name = this.point.name, zipcode = this.point.ZCTA5CE20;
+                    var name = this.point.name, zipcode = this.point.zipcode;
                     if (name === "Nashville") {
                         return zipcode
                     } else {

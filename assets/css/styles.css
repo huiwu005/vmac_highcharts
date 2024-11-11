@@ -6,13 +6,20 @@ html,body{
 body{
 	font-family: sans-serif;
 }
-#center {
+.text-center {
   text-align: center;
 }
-#top {
+.text-top {
   padding-top: 20px;
   vertical-align: top;
 }
-#bottom {
+.text-bottom {
   vertical-align: bottom;
+}
+.text-middle {
+  vertical-align: middle;
+}
+.border-blue {
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  color: blue;
 }

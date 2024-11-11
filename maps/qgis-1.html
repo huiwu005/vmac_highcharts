@@ -1,5 +1,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/map-styles.css">
 <link rel="stylesheet" href="../assets/css/styles.css">
@@ -44,7 +43,7 @@
       <ol>
         <!-- file 1 -->
         <li>TN map with Counties: <code>STATEFP_47.geojson</code></li>
-        <details><summary>QGIS Steps</summary>
+        <details open><summary>QGIS Steps</summary>
           <p>Split <code>tl_2023_us_county</code> by <b>Unique ID field:</b> <code>STATEFP</code></p>
           <div class="row details-img banner">
             <div class="col-sm-7 inline-block ">
@@ -66,41 +65,41 @@
             ..., 
             tl_2023_47_county_join_zcta520_47189.geojson</pre></li>
         <b>Issue:</b> file <code>tl_2023_us_zcta520</code> does not have <code>GEOID</code> feature, so
-        <details><summary>QGIS Steps</summary>
+        <details open><summary>QGIS Steps</summary>
           <ol>
             <li>Right click <code>tl_2023_us_county</code> then <b>Filter...</b> by <code>"STATEFP" = '47'</code></li>
             <li>Right click <code>tl_2023_us_zcta520</code> then <b>Filter...</b> by <code>"ZCTA5CE20" >= '37010' AND "ZCTA5CE20" <= '38589'</code></li>
             <div class="row details-img banner">
-              <div class="col-sm-3 inline-block" id="center">
-                <img src="assets/qgis/tn_drilldown/right_click_filter.png" width="90%">
+              <div class="col-sm-2 inline-block text-top">
+                <img src="assets/qgis/tn_drilldown/right_click_filter.png" width="150%">
               </div>
-              <div class="col-sm-4 inline-block" id="top">
-                <img src="assets/qgis/tn_drilldown/filter_statefp47.png" width="120%">
+              <div class="col-sm-4 inline-block text-top">
+                <img src="assets/qgis/tn_drilldown/filter_statefp47.png" width="140%" hspace="20">
               </div>
-              <div class="col-sm-4 inline-block" id="top">
-                <img src="assets/qgis/tn_drilldown/filter_ZCTA5CE20.png" width="120%">
+              <div class="col-sm-4 inline-block text-top">
+                <img src="assets/qgis/tn_drilldown/filter_ZCTA5CE20.png" width="140%" hspace="80">
               </div>
             </div>
 
             <li>Join filtered <code>tl_2023_us_zcta520</code> to <code>tl_2023_us_county</code></li>
-            <div class="row details-img banner">
-              <div class="col-sm-6 inline-block ">
+            <div class="row details-img banner" id="join">
+              <div class="col-sm-5 inline-block text-top">
                 <img src="assets/qgis/tn_drilldown/join_county_zcta520_layers.png" width="100%">
-                <img src="assets/qgis/tn_drilldown/join_attributes.png" width="100%">
+                <img src="assets/qgis/tn_drilldown/join_attributes.png" width="110%">
               </div>
-              <div class="col-sm-5 inline-block" id="top">
-                <img src="assets/qgis/tn_drilldown/join_county_zcta520_fig2.png" height="450px">
+              <div class="col-sm-5 inline-block text-top">
+                <img src="assets/qgis/tn_drilldown/join_county_zcta520_fig2.png" width="150%">
               </div>
             </div>
         
             <li>Split <code>Joined layer</code> by <code>GEOID</code> in <b>Unique ID field:</b></li>
             <div class="details-img">
-              <div class="col-sm-6 inline-block">
+              <div class="col-sm-5 inline-block">
                 <img src="assets/qgis/tn_drilldown/split_joined_layer.png" width="100%">
                 <img src="assets/qgis/tn_drilldown/split_vector_layer.png">
               </div>
-              <div class="col-sm-5 inline-block" id="top">
-                <img src="assets/qgis/tn_drilldown/join_county_zcta520_fig4_split.png" height="450px">
+              <div class="col-sm-5 inline-block text-top">
+                <img src="assets/qgis/tn_drilldown/join_county_zcta520_fig4_split.png"  width="150%">
               </div>
               <p><b>Output:</b> <code>tl_2023_47_county_join_zcta520_47001.geojson, tl_2023_47_county_join_zcta520_47003.geojson, ..., tl_2023_47_county_join_zcta520_47189.geojson</code></p>
             </div>

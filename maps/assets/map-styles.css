@@ -121,3 +121,6 @@ code {color:black;}
 .mytable tbody tr:nth-child(2),
 .mytable tbody tr:nth-child(3)
 {background-color: orange;}
+pre.gray {
+  background-color: lightyellow;
+}
