@@ -42,9 +42,9 @@ https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file
 
 - Counties (and equivalent) `tl_2023_us_county`
 - ZIP Code Tabulation Areas `tl_2023_us_zcta520`
-- *For e.g. 1* Landmarks &rarr; Area Landmark (Tennessee) `tl_2023_47_arealm`
-- *For e.g. 1* Roads &rarr; All Roads (Tennessee &rarr; Davidson County 47037) `tl_2023_47037_roads`
-- *For e.g. 1* Water &rarr; Area Hydrography (Tennessee &rarr; Davidson County 47037) `tl_2023_47037_areawater`
+- *For e.g. 2* Landmarks &rarr; Area Landmark (Tennessee) `tl_2023_47_arealm`
+- *For e.g. 2* Roads &rarr; All Roads (Tennessee &rarr; Davidson County 47037) `tl_2023_47037_roads`
+- *For e.g. 2* Water &rarr; Area Hydrography (Tennessee &rarr; Davidson County 47037) `tl_2023_47037_areawater`
 
 ## 4. QGIS 
 https://www.qgis.org/
