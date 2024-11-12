@@ -73,4 +73,5 @@ zip,lat,lng,city,state_id,state_name,zcta,parent_zcta,population,density,county_
 
 ## 5. run this app
 `php -S localhost:3000`
+Then visit http://localhost:3000 on browser
 
