@@ -1,10 +1,4 @@
-<head>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-# Highcharts use in VMAC-DCC
+# Using Highcharts in VMAC-DCC
 *November, 2024*
 
 **github url:** https://github.com/huiwu005/vmac_highcharts
@@ -19,20 +13,7 @@ https://www.highcharts.com/demo
 https://code.highcharts.com/mapdata/
 
 ## 2. Two examples for map code with Zip Code
-<div class="row text-middle">
-  <div class="col-sm-6 text-center">
-    <h4>Example 1: Drilldown to Zipcode map and use <i>javascript</i> file.</h4>
-    <div class="border border-primary">
-      <img src="maps/assets/qgis/tn_drilldown/tennessee-state-map-by-c.png" width="900">
-      <img src="maps/assets/qgis/tn_drilldown/tennessee-state-map-by-c-2.png" width="51%">
-    </div>
-  </div>
-
-  <div class="col-sm-6 text-center">
-    <h4>Example 2: Multi-layer with Zipcode map and use <i>geojson</i> file.</h4>
-    <img src="maps/assets/qgis/davidson/davidson-county-event-by.png" width="90%">
-  </div>
-</div>
+![](assets/images/readme_image.png)
 
 
 ## 3. Shapefiles on Census 
