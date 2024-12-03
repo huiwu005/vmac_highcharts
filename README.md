@@ -48,11 +48,15 @@ zip,lat,lng,city,state_id,state_name,zcta,parent_zcta,population,density,county_
   - **Layer 3:** assets/maps/qgis/tl_2023_47037_roads_IUS.geojson
   - **Layer 4:** assets/maps/qgis/tl_2023_47037_arealm_areawater.geojson
 
+## 5. Reduce your GeoJSON file size
+Refer Kei Saito [How to Reduce your GeoJSON File Size Smaller for Better Performance](https://blog.exploratory.io/how-to-reduce-your-geojson-file-size-smaller-for-better-performance-8fb77759870c)
 
+- Upload your map file to https://mapshaper.org/
+  <i>Drop, paste or <code>select</code> files to import. Shapefile, GeoJSON, TopoJSON, KML and CSV formats are supported. Files can be zipped or gzipped.</i>
+- Simplify and Adjust the <i>Settings</i>
+- Export
 
-
-
-## 5. run this app
+## 6. run this app
 `php -S localhost:3000`
 Then visit http://localhost:3000 on browser
 
